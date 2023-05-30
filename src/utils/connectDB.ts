@@ -1,18 +1,18 @@
 import mongoose from "mongoose";
-import { log } from "./logger";
-const { URI } = process.env;
+import { print } from "./customPrint";
+const { DB_URI } = process.env;
 
-const dbConnect = async (): Promise<void> => {
+const connectDB = async (): Promise<void> => {
   try {
-    if (!URI) {
-      log.error("No URI found in .env file");
+    if (!DB_URI) {
+      print.error("No URI found in .env file");
       process.exit(1);
     }
-    await mongoose.connect(URI);
-    log.info("🗄️  Database connected");
+    await mongoose.connect(DB_URI);
+    print.info(" Database connected");
   } catch (err: any) {
-    log.error(err.message);
+    print.error(err.message);
   }
 };
 
-export { dbConnect };
+export { connectDB };
