@@ -5,7 +5,6 @@ import morgan from "morgan";
 const app: Application = express();
 
 dotenv.config();
-
 // dbConnect();
 
 app.use(cors());
