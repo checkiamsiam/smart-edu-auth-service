@@ -14,6 +14,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+console.log("c");
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
