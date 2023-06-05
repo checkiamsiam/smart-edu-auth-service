@@ -3,7 +3,7 @@ import { print } from "./utils/customPrint";
 
 const PORT = process.env.PORT || 5000;
 
-const run = async (): Promise<void> => {
+const runServer = async (): Promise<void> => {
   try {
     app.listen(PORT, () => {
       if (process.env.NODE_ENV === "development") {
@@ -15,4 +15,4 @@ const run = async (): Promise<void> => {
   }
 };
 
-run();
+runServer();

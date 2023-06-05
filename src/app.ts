@@ -1,20 +1,45 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express, { Application } from "express";
+import ExpressMongoSanitize from "express-mongo-sanitize";
+import helmet from "helmet";
+import hpp from "hpp";
 import morgan from "morgan";
+import globalErrorHandler from "./middleware/globalErrorHandler";
+import routes from "./routes";
 const app: Application = express();
 
+//connections
 dotenv.config();
 // dbConnect();
 
+//global app middleware
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(ExpressMongoSanitize());
+app.use(hpp());
+
+//development middleware
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+//routes
+app.use("/api/v1", routes);
+
+// root
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.status(200).send("welcome to edu-bd server");
 });
+
+// Not found catch
+app.all("*", (req, res) => {
+  res.status(404).send({ success: false, message: "Adress not found" });
+});
+
+// error handling middleware
+app.use(globalErrorHandler);
 
 export { app };
