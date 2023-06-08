@@ -1,7 +1,7 @@
 {
   "name": "Smart-EDU-Backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "SmartEdu: Streamlined Education Management Software",
   "main": "src/index.js",
   "scripts": {
     "dev": "set NODE_ENV=development&&ts-node-dev --rs --poll ./src/index.ts",
