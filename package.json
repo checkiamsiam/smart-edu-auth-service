@@ -1,10 +1,10 @@
 {
-  "name": "edu-bd",
+  "name": "Smart-EDU-Backend",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "ts-node-dev --rs --poll ./src/index.ts",
+    "dev": "set NODE_ENV=development&&ts-node-dev --rs --poll ./src/index.ts",
     "build": "tsc",
     "start": "node ./dist/index.js",
     "lint": "eslint .",
@@ -22,6 +22,7 @@
     "@types/express": "^4.17.17",
     "@types/hpp": "^0.2.2",
     "@types/morgan": "^1.9.4",
+    "@types/node": "^20.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "eslint": "^8.41.0",

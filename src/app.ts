@@ -1,17 +1,13 @@
 import cors from "cors";
-import dotenv from "dotenv";
 import express, { Application } from "express";
 import ExpressMongoSanitize from "express-mongo-sanitize";
 import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
+import config from "./config";
 import globalErrorHandler from "./middleware/globalErrorHandler";
 import routes from "./routes";
 const app: Application = express();
-
-//connections
-dotenv.config();
-// dbConnect();
 
 //global app middleware
 app.use(helmet());
@@ -22,7 +18,7 @@ app.use(ExpressMongoSanitize());
 app.use(hpp());
 
 //development middleware
-if (process.env.NODE_ENV === "development") {
+if (config.isDevelopment) {
   app.use(morgan("dev"));
 }
 

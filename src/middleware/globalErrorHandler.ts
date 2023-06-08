@@ -1,3 +1,4 @@
+import config from "../config";
 import { THandleErrorFunc, THandleErrorResponse } from "../types/ErrorTypes";
 import { TErrorMiddleware } from "../types/milldewareTypes";
 import AppError from "../utils/CustomError";
@@ -83,7 +84,7 @@ const globalErrorHandler: TErrorMiddleware = (err, req, res, next) => {
     err = new AppError("Token expired. Please log in again!", 401);
   }
 
-  if (process.env.NODE_ENV === "development") {
+  if (config.isDevelopment) {
     sendErrorDev(err, res);
   } else {
     sendErrorProd(err, res);

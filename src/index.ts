@@ -1,13 +1,16 @@
+import dotenv from "dotenv";
 import { app } from "./app";
+import config from "./config";
+import { connectDB } from "./utils/connectDB";
 import { print } from "./utils/customPrint";
-
-const PORT = process.env.PORT || 5000;
 
 const runServer = async (): Promise<void> => {
   try {
-    app.listen(PORT, () => {
-      if (process.env.NODE_ENV === "development") {
-        print.info(`✔ Server started at http://localhost:${PORT}`);
+    dotenv.config();
+    await connectDB();
+    app.listen(config.port, () => {
+      if (config.isDevelopment) {
+        print.info(`✔ Server started at http://localhost:${config.port}`);
       }
     });
   } catch (err: any) {

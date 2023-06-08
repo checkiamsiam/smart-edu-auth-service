@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
+import config from "../config";
 import { print } from "./customPrint";
-const { DB_URI } = process.env;
 
 const connectDB = async (): Promise<void> => {
   try {
-    if (!DB_URI) {
+    if (!config.dbUri) {
       print.error("No URI found in .env file");
       process.exit(1);
     }
-    await mongoose.connect(DB_URI);
+    await mongoose.connect(config.dbUri);
     print.info("Database connected");
   } catch (err: any) {
     print.error(err.message);
