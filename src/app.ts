@@ -27,7 +27,7 @@ app.use("/api/v1", routes);
 
 // root
 app.get("/", (req, res) => {
-  res.status(200).send("welcome to edu-bd server");
+  res.status(200).send("welcome to Smart Edu server");
 });
 
 // Not found catch
@@ -38,4 +38,4 @@ app.all("*", (req, res) => {
 // error handling middleware
 app.use(globalErrorHandler);
 
-export { app };
+export default app;

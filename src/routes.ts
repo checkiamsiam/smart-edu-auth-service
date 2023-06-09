@@ -1,9 +1,8 @@
 import express from "express";
+import userRoutes from "./modules/user/user.route";
 
 const routes = express.Router();
 
-routes.get("/", (req, res) => {
-  res.send("welcome to edu-bd server from routes");
-});
+routes.use("/users", userRoutes);
 
 export default routes;
