@@ -14,7 +14,7 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
       enum: {
-        values: ["admin", "user", "faculty"],
+        values: ["admin", "student", "faculty"],
         message:
           '{VALUE} is not supported. must be either "admin" , "student" or "faculty"',
       },
