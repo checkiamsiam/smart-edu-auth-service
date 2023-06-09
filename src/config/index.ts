@@ -6,7 +6,8 @@ dotenv.config();
 const config: IConfig = {
   isDevelopment: process.env.NODE_ENV === "development",
   port: process.env.PORT || 5000,
-  dbUri: process.env.DB_URL,
+  dbUriDev: process.env.DB_URL_DEV,
+  dbUriProd: process.env.DB_URL_PROD,
 };
 
 export default config;
