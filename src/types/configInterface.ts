@@ -1,7 +1,8 @@
 interface IConfig {
   isDevelopment: boolean;
   port: number | string;
-  dbUri: string | undefined;
+  dbUriDev: string | undefined;
+  dbUriProd: string | undefined;
 }
 
 export default IConfig;
