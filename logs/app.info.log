@@ -1,0 +1,4 @@
+
+{"level":50,"time":"2023-06-10T16:54:13+06:00","pid":1004,"hostname":"DESKTOP-EDBK0TQ","msg":"test"}
+{"level":30,"time":"2023-06-10T16:54:13+06:00","pid":1004,"hostname":"DESKTOP-EDBK0TQ","msg":"test"}
+{"level":30,"time":"2023-06-10T16:54:13+06:00","pid":1004,"hostname":"DESKTOP-EDBK0TQ","msg":"✔ Server started at http://localhost:5000"}
