@@ -1,6 +1,6 @@
+import { ErrorRequestHandler } from "express";
 import config from "../config";
 import { THandleErrorFunc, THandleErrorResponse } from "../types/ErrorTypes";
-import { TErrorMiddleware } from "../types/milldewareTypes";
 import AppError from "../utils/CustomError";
 import { print } from "../utils/customPrint";
 
@@ -60,7 +60,7 @@ const sendErrorDev: THandleErrorResponse = (err, res) => {
 };
 
 // globalErrorHandler
-const globalErrorHandler: TErrorMiddleware = (err, req, res, next) => {
+const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.status = err.status || "error";
 

@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { RequestHandler } from "express";
 import catchAsyncErrors from "../../utils/catchAsyncError";
 import userService from "./user.service";
 
-const createUser = catchAsyncErrors(async (req: Request, res: Response) => {
+const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {
   const userData = req.body;
   const result = await userService.createUser(userData);
   res.status(200).json({

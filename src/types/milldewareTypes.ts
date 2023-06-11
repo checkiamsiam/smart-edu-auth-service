@@ -5,9 +5,3 @@ export type TMiddleware = (
   res: Response,
   next: NextFunction
 ) => Promise<void>;
-export type TErrorMiddleware = (
-  err: any,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => void;
