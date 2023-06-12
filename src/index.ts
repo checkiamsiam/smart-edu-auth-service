@@ -5,7 +5,7 @@ import { print, printError } from "./utils/customPrint";
 
 // handle uncaughtExceptions
 process.on("uncaughtException", (error) => {
-  console.log("Uncaught Exception...");
+  printError.error("Uncaught Exception...");
   process.exit(1);
 });
 
@@ -25,7 +25,7 @@ const runServer = async (): Promise<void> => {
 
   // handle unHandledRejection
   process.on("unhandledRejection", (err) => {
-    console.log("UNHANDLED REJECTION 💥");
+    printError.error("UNHANDLED REJECTION 💥");
     if (server) {
       server.close(() => {
         process.exit(1);
@@ -40,7 +40,7 @@ runServer();
 
 // handle signal termination
 process.on("SIGTERM", () => {
-  console.log("👋 SIGTERM RECEIVED. Shutting down gracefully");
+  print.info("👋 SIGTERM RECEIVED. Shutting down gracefully");
   server.close(() => {
     console.log("💥 Process terminated!");
   });

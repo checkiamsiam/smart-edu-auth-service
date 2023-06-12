@@ -4,8 +4,8 @@ import path from "path";
 import pino from "pino";
 import PinoPretty from "pino-pretty";
 
-const errorsDir = path.join("logs", "errors", dayjs().format("D MMMM, YYYY"));
-const infosDir = path.join("logs", "infos", dayjs().format("D MMMM, YYYY"));
+const errorsDir = path.join("logs", "errors");
+const infosDir = path.join("logs", "infos");
 
 // Create the necessary directories if they don't exist
 fs.mkdirSync(errorsDir, { recursive: true });
