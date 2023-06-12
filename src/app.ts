@@ -7,7 +7,7 @@ import morgan from "morgan";
 import config from "./config";
 import globalErrorHandler from "./middleware/globalErrorHandler";
 import routes from "./routes";
-import { print } from "./utils/customPrint";
+import { print, printError } from "./utils/customPrint";
 const app: Application = express();
 
 //global app middleware
@@ -25,7 +25,7 @@ if (config.isDevelopment) {
 
 //routes
 app.use("/api/v1", routes);
-print.error("test");
+printError.error("test");
 print.info("test");
 // root
 app.get("/", (req, res) => {

@@ -2,7 +2,7 @@ import config from "../config";
 import { THandleErrorFunc, THandleErrorResponse } from "../types/ErrorTypes";
 import { TErrorMiddleware } from "../types/milldewareTypes";
 import AppError from "../utils/CustomError";
-import { print } from "../utils/customPrint";
+import { printError } from "../utils/customPrint";
 
 // handel cast error db
 const handelCastErrorDB: THandleErrorFunc = (err) => {
@@ -39,7 +39,7 @@ const sendErrorProd: THandleErrorResponse = (err, res) => {
       message: err.message,
     });
   } else {
-    print.error("Error 💥", err);
+    printError.error("Error 💥" + err);
     // 2. Send generic message to client
     res.status(500).json({
       success: false,

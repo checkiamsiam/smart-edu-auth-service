@@ -1,24 +1,26 @@
 import dayjs from "dayjs";
+import fs from "fs";
+import path from "path";
 import pino from "pino";
 import PinoPretty from "pino-pretty";
 
+const errorsDir = path.join("logs", "errors", dayjs().format("D MMMM, YYYY"));
+const infosDir = path.join("logs", "infos", dayjs().format("D MMMM, YYYY"));
+
+// Create the necessary directories if they don't exist
+fs.mkdirSync(errorsDir, { recursive: true });
+fs.mkdirSync(infosDir, { recursive: true });
+
 const print = pino({
+  level: "info",
   transport: {
     targets: [
       { target: "pino-pretty", level: "info", options: { colorize: true } },
       {
-        level: "error",
-        target: "pino/file",
-        options: {
-          destination: "logs/app.error.log",
-          flags: "a",
-        },
-      },
-      {
         level: "info",
         target: "pino/file",
         options: {
-          destination: "logs/app.info.log",
+          destination: path.join(infosDir, "app.info.log"),
           flags: "a",
         },
       },
@@ -28,7 +30,28 @@ const print = pino({
     },
   },
   prettifier: PinoPretty,
-  timestamp: () => `,"time":"${dayjs().format()}"`,
+  timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
+});
+const printError = pino({
+  level: "error",
+  transport: {
+    targets: [
+      { target: "pino-pretty", level: "info", options: { colorize: true } },
+      {
+        level: "error",
+        target: "pino/file",
+        options: {
+          destination: path.join(errorsDir, "app.error.log"),
+          flags: "a",
+        },
+      },
+    ],
+    options: {
+      colorize: true,
+    },
+  },
+  prettifier: PinoPretty,
+  timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
 });
 
-export { print };
+export { print, printError };

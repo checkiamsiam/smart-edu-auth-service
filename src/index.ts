@@ -1,6 +1,6 @@
 import app from "./app";
 import config from "./config";
-import { print } from "./utils/customPrint";
+import { print, printError } from "./utils/customPrint";
 
 const runServer = async (): Promise<void> => {
   try {
@@ -11,7 +11,7 @@ const runServer = async (): Promise<void> => {
       }
     });
   } catch (err: any) {
-    print.error(err.message);
+    printError.error(err.message);
   }
 };
 
