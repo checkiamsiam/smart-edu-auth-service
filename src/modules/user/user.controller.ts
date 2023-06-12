@@ -1,10 +1,13 @@
 import { RequestHandler } from "express";
 import catchAsyncErrors from "../../utils/catchAsyncError";
+import { IUser } from "./user.interface";
+import { createUserReq } from "./user.request.schema";
 import userService from "./user.service";
 
 const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {
-  const userData = req.body;
-  const result = await userService.createUser(userData);
+  const reqBody = req.body
+  const userData = createUserReq.parse(reqBody)
+  const result = await userService.createUser(userData as IUser);
   res.status(200).json({
     success: true,
     message: "User created successfully",
