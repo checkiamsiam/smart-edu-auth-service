@@ -33,10 +33,10 @@ const handelValidationErrorDB: THandleErrorFunc = (err) => {
 };
 
 const sendErrorProd: THandleErrorResponse = (err, res) => {
-  if (err.isOperational) {
+  if (!err.isOperational) {
     res.status(err.statusCode).json({
       success: false,
-      message: err.message,
+      message: "Something went wrong",
     });
   } else {
     print.error("Error 💥", err);

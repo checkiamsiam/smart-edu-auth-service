@@ -111,3 +111,53 @@
 {"level":30,"time":"2023-06-11T10:34:41+00:00","pid":22573,"hostname":"codespaces-b74340","msg":"test"}
 {"level":50,"time":"2023-06-11T10:34:44+00:00","pid":22666,"hostname":"codespaces-b74340","msg":"test"}
 {"level":30,"time":"2023-06-11T10:34:44+00:00","pid":22666,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:33:07+00:00","pid":4921,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:33:07+00:00","pid":4921,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:33:35+00:00","pid":5237,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:33:35+00:00","pid":5237,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:33:36+00:00","pid":5284,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:33:36+00:00","pid":5284,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:33:52+00:00","pid":5426,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:33:52+00:00","pid":5426,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:33:56+00:00","pid":5426,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:34:07+00:00","pid":5426,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:34:19+00:00","pid":5710,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:34:19+00:00","pid":5710,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:34:39+00:00","pid":5952,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:34:39+00:00","pid":5952,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:35:39+00:00","pid":6394,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:35:39+00:00","pid":6394,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:35:45+00:00","pid":6394,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:36:04+00:00","pid":6707,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:36:04+00:00","pid":6707,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:36:26+00:00","pid":6897,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:36:26+00:00","pid":6897,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:36:33+00:00","pid":6897,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:36:49+00:00","pid":7155,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:36:49+00:00","pid":7155,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:38:28+00:00","pid":7831,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:38:28+00:00","pid":7831,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:38:33+00:00","pid":7831,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:39:10+00:00","pid":8218,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:39:10+00:00","pid":8218,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:40:25+00:00","pid":8725,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:40:25+00:00","pid":8725,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:40:32+00:00","pid":8725,"hostname":"codespaces-b74340","msg":"Error 💥"}
+{"level":50,"time":"2023-06-12T05:41:54+00:00","pid":9355,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:41:54+00:00","pid":9355,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:43:08+00:00","pid":9850,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:43:08+00:00","pid":9850,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:43:40+00:00","pid":10123,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:43:40+00:00","pid":10123,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:44:08+00:00","pid":10327,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:44:08+00:00","pid":10327,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:44:15+00:00","pid":10432,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:44:15+00:00","pid":10432,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:44:21+00:00","pid":10527,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:44:21+00:00","pid":10527,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:44:41+00:00","pid":10660,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:44:41+00:00","pid":10660,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:44:48+00:00","pid":10752,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:44:48+00:00","pid":10752,"hostname":"codespaces-b74340","msg":"test"}
+{"level":50,"time":"2023-06-12T05:49:18+00:00","pid":12451,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"2023-06-12T05:49:18+00:00","pid":12451,"hostname":"codespaces-b74340","msg":"test"}
