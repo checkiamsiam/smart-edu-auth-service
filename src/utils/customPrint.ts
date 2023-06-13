@@ -18,7 +18,7 @@ const logStream = (filename: string) =>
     interval: "1d",
     path: infosDir,
     maxFiles: 7,
-    maxSize: "1K"
+    maxSize: "100K"
   });
 
 const errorLogStream = (filename: string) =>
@@ -26,7 +26,7 @@ const errorLogStream = (filename: string) =>
     interval: "1d",
     path: errorsDir,
     maxFiles: 7,
-    maxSize: "1K"
+    maxSize: "100K"
   });
 
 

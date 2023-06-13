@@ -19,3 +19,5 @@
 {"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73867,"hostname":"codespaces-b74340","msg":"test"}
 {"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73867,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
 {"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73979,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:43 AM","pid":73979,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:43 AM","pid":77972,"hostname":"codespaces-b74340","msg":"test"}
