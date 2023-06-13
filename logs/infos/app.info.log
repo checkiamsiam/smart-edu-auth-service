@@ -1,17 +1,21 @@
-{"level":30,"time":"13 June, 2023 at 5:36 AM","pid":26808,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:37 AM","pid":26808,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27739,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27739,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27774,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27774,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27957,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:40 AM","pid":27957,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:40 AM","pid":28905,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:40 AM","pid":28905,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:40 AM","pid":28983,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:41 AM","pid":29197,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:41 AM","pid":29197,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:41 AM","pid":29240,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:41 AM","pid":29240,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
-{"level":30,"time":"13 June, 2023 at 5:41 AM","pid":29518,"hostname":"codespaces-b74340","msg":"test"}
-{"level":30,"time":"13 June, 2023 at 5:42 AM","pid":29518,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72161,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72161,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72210,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72210,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72322,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72322,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72430,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:34 AM","pid":72430,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:35 AM","pid":72523,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:35 AM","pid":72523,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:35 AM","pid":72816,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:35 AM","pid":72816,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:37 AM","pid":73565,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:37 AM","pid":73565,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:37 AM","pid":73680,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:37 AM","pid":73680,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:37 AM","pid":73749,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73749,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73867,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73867,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 7:38 AM","pid":73979,"hostname":"codespaces-b74340","msg":"test"}

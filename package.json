@@ -35,7 +35,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@vrbo/pino-rotating-file": "^4.4.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
@@ -46,6 +45,7 @@
     "mongoose": "^7.2.1",
     "pino": "^8.14.1",
     "pino-pretty": "^10.0.0",
+    "rotating-file-stream": "^3.1.0",
     "zod": "^3.21.4"
   },
   "lint-staged": {
