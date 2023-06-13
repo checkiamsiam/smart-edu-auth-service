@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "set NODE_ENV=development&&ts-node-dev --rs --poll ./src/index.ts",
     "build": "tsc",
-    "start": "node ./dist/index.js",
+    "start": "tsc&&node ./dist/index.js",
     "lint": "eslint .",
     "lint-fix": "eslint --ext .js,.ts src/ --fix",
     "format": "prettier --write src/**/*.{js,ts,json}",
