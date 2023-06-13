@@ -1,11 +1,12 @@
 import { Server } from "http";
 import app from "./app";
 import config from "./config";
+import { connectDB } from "./utils/connectDB";
 import { print, printError } from "./utils/customPrint";
 
 // handle uncaughtExceptions
 process.on("uncaughtException", (error) => {
-  printError.error("Uncaught Exception...");
+  printError.error("Uncaught Exception...😓. Process Terminated");
   process.exit(1);
 });
 
@@ -13,7 +14,7 @@ let server: Server;
 
 const runServer = async (): Promise<void> => {
   try {
-    // await connectDB();
+    await connectDB();
     server = app.listen(config.port, () => {
       if (config.isDevelopment) {
         print.info(`✔ Server started at http://localhost:${config.port}`);
@@ -25,7 +26,7 @@ const runServer = async (): Promise<void> => {
 
   // handle unHandledRejection
   process.on("unhandledRejection", (err) => {
-    printError.error("UNHANDLED REJECTION 💥");
+    printError.error("UNHANDLED REJECTION... 💥. Process Terminated");
     if (server) {
       server.close(() => {
         process.exit(1);
@@ -42,6 +43,6 @@ runServer();
 process.on("SIGTERM", () => {
   print.info("👋 SIGTERM RECEIVED. Shutting down gracefully");
   server.close(() => {
-    console.log("💥 Process terminated!");
+    print.info("💥 Process terminated!");
   });
 });

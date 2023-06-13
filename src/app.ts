@@ -7,7 +7,6 @@ import morgan from "morgan";
 import config from "./config";
 import globalErrorHandler from "./middleware/globalErrorHandler";
 import routes from "./routes";
-import { print, printError } from "./utils/customPrint";
 const app: Application = express();
 
 //global app middleware
@@ -25,8 +24,7 @@ if (config.isDevelopment) {
 
 //routes
 app.use("/api/v1", routes);
-printError.error("test");
-print.info("test");
+
 // root
 app.get("/", (req, res) => {
   res.status(200).send("welcome to Smart Edu server");
