@@ -1,8 +1,12 @@
-import { ErrorRequestHandler } from "express";
+import { ErrorRequestHandler, Response } from "express";
 import config from "../config";
-import { THandleErrorFunc, THandleErrorResponse } from "../types/ErrorTypes";
 import AppError from "../utils/CustomError";
 import { printError } from "../utils/customPrint";
+
+
+type THandleErrorFunc = (err: any, res?: Response) => AppError;
+type THandleErrorResponse = (err: any, res: Response) => void;
+
 
 // handel cast error db
 const handelCastErrorDB: THandleErrorFunc = (err) => {
@@ -21,7 +25,7 @@ const handelDuplicateErrorDB: THandleErrorFunc = (err) => {
   return new AppError(message, 400);
 };
 
-// handel validation error
+// handel validation ( mongoose + zod ) error
 const handelValidationErrorDB: THandleErrorFunc = (err) => {
   try {
     const errors = Object.values(err.errors).map((el: any) => el.message);
@@ -31,6 +35,7 @@ const handelValidationErrorDB: THandleErrorFunc = (err) => {
     return new AppError(err.message, 400);
   }
 };
+
 
 const sendErrorProd: THandleErrorResponse = (err, res) => {
   if (!err.isOperational) {
@@ -72,9 +77,10 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     err = handelDuplicateErrorDB(err);
   }
 
-  if (err.name === "ValidationError") {
+  if (err.name === "ValidationError" || err.name === "ZodError") {
     err = handelValidationErrorDB(err);
   }
+
 
   if (err.name === "JsonWebTokenError") {
     err = new AppError("Invalid token. Please log in again!", 401);

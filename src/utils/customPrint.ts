@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import pino from "pino";
 import PinoPretty from "pino-pretty";
+import config from "../config";
 
 const errorsDir = path.join("logs", "errors");
 const infosDir = path.join("logs", "infos");
@@ -11,20 +12,34 @@ const infosDir = path.join("logs", "infos");
 fs.mkdirSync(errorsDir, { recursive: true });
 fs.mkdirSync(infosDir, { recursive: true });
 
+const printTargets = config.isDevelopment ? [{ target: "pino-pretty", level: "info", options: { colorize: true } }] : [
+  { target: "pino-pretty", level: "info", options: { colorize: true } },
+  {
+    level: "info",
+    target: "pino/file",
+    options: {
+      destination: path.join(infosDir, "app.info.log"),
+      flags: "a",
+    },
+  },
+]
+
+const printErrTargets = config.isDevelopment ? [{ target: "pino-pretty", level: "error", options: { colorize: true } }] : [
+  { target: "pino-pretty", level: "error", options: { colorize: true } },
+  {
+    level: "error",
+    target: "pino/file",
+    options: {
+      destination: path.join(errorsDir, "app.error.log"),
+      flags: "a",
+    },
+  },
+]
+
 const print = pino({
   level: "info",
   transport: {
-    targets: [
-      { target: "pino-pretty", level: "info", options: { colorize: true } },
-      {
-        level: "info",
-        target: "pino/file",
-        options: {
-          destination: path.join(infosDir, "app.info.log"),
-          flags: "a",
-        },
-      },
-    ],
+    targets: printTargets,
     options: {
       colorize: true,
     },
@@ -35,17 +50,7 @@ const print = pino({
 const printError = pino({
   level: "error",
   transport: {
-    targets: [
-      { target: "pino-pretty", level: "info", options: { colorize: true } },
-      {
-        level: "error",
-        target: "pino/file",
-        options: {
-          destination: path.join(errorsDir, "app.error.log"),
-          flags: "a",
-        },
-      },
-    ],
+    targets: printErrTargets,
     options: {
       colorize: true,
     },

@@ -1,2 +1,7 @@
-{"level":30,"time":"12 June, 2023 at 10:34 PM","pid":7228,"hostname":"DESKTOP-1ARH4UO","msg":"test"}
-{"level":30,"time":"12 June, 2023 at 10:34 PM","pid":7228,"hostname":"DESKTOP-1ARH4UO","msg":"✔ Server started at http://localhost:5000"}
+{"level":30,"time":"13 June, 2023 at 5:36 AM","pid":26808,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 5:37 AM","pid":26808,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27739,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27739,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27774,"hostname":"codespaces-b74340","msg":"test"}
+{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27774,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"13 June, 2023 at 5:38 AM","pid":27957,"hostname":"codespaces-b74340","msg":"test"}

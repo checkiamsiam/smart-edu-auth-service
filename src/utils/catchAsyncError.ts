@@ -1,5 +1,10 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
-import { TMiddleware } from "../types/milldewareTypes";
+
+type TMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => Promise<void>;
 
 const catchAsyncErrors = (fn: TMiddleware): RequestHandler => {
   return (req: Request, res: Response, next: NextFunction) => {
