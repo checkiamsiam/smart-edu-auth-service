@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import catchAsyncErrors from "../../utils/catchAsyncError";
+import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import userService from "./user.service";
 
 const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {

@@ -5,7 +5,7 @@ import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
 import config from "./config";
-import globalErrorHandler from "./middleware/globalErrorHandler";
+import globalErrorHandler from "./middleware/globalErrorHandler.middleware";
 import routes from "./routes";
 const app: Application = express();
 

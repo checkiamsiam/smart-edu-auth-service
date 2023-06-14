@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import config from "../config";
-import { print, printError } from "./customPrint";
+import { print, printError } from "./customLogger.util";
 
 const connectDB = async (): Promise<void> => {
   try {

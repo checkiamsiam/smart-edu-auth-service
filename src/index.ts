@@ -1,8 +1,8 @@
 import { Server } from "http";
 import app from "./app";
 import config from "./config";
-import { connectDB } from "./utils/connectDB";
-import { print, printError } from "./utils/customPrint";
+import { connectDB } from "./utils/connectDB.util";
+import { print, printError } from "./utils/customLogger.util";
 
 // handle uncaughtExceptions
 process.on("uncaughtException", (error) => {

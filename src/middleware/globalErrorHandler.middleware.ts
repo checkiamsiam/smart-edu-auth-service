@@ -1,7 +1,7 @@
 import { ErrorRequestHandler, Response } from "express";
 import config from "../config";
-import AppError from "../utils/CustomError";
-import { printError } from "../utils/customPrint";
+import AppError from "../utils/customError.util";
+import { printError } from "../utils/customLogger.util";
 
 
 type THandleErrorFunc = (err: any, res?: Response) => AppError;
