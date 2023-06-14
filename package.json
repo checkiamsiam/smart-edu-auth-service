@@ -1,5 +1,5 @@
 {
-  "name": "Smart-EDU-Backend",
+  "name": "smart-edu-backend",
   "version": "1.0.0",
   "description": "SmartEdu: Streamlined Education Management Software",
   "main": "src/index.js",
