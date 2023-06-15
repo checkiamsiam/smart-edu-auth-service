@@ -44,5 +44,6 @@ process.on("SIGTERM", () => {
   print.info("👋 SIGTERM RECEIVED. Shutting down gracefully");
   server.close(() => {
     print.info("💥 Process terminated!");
+    process.exit(1);
   });
 });

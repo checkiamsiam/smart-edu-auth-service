@@ -7,6 +7,7 @@ import morgan from "morgan";
 import config from "./config";
 import globalErrorHandler from "./middleware/globalErrorHandler.middleware";
 import routes from "./routes";
+import sendResponse from "./utils/sendResponse.util";
 const app: Application = express();
 
 //global app middleware
@@ -27,12 +28,20 @@ app.use("/api/v1", routes);
 
 // root
 app.get("/", (req, res) => {
-  res.status(200).send("welcome to Smart Edu server");
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: "Welcome to smart edu server"
+  })
 });
 
 // Not found catch
 app.all("*", (req, res) => {
-  res.status(404).send({ success: false, message: "Adress not found" });
+  sendResponse(res, {
+    statusCode: 200,
+    success: false,
+    message: "Adress not found"
+  })
 });
 
 // error handling middleware

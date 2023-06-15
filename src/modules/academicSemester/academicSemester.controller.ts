@@ -2,6 +2,7 @@ import { RequestHandler } from "express";
 import httpStatus from "http-status";
 import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import AppError from "../../utils/customError.util";
+import sendResponse from "../../utils/sendResponse.util";
 import { academicSemesterTitleCodeMapper } from "./academicSemester.constant";
 import { IAcademicSemester } from "./academicSemester.interface";
 import academicSemesterService from "./academicSemester.service";
@@ -12,11 +13,12 @@ const createAcademicSemester: RequestHandler = catchAsyncErrors(async (req, res)
         throw new AppError("invalid code", httpStatus.BAD_REQUEST)
     }
     const result = await academicSemesterService.create(body)
-    res.status(httpStatus.OK).json({
+    sendResponse<IAcademicSemester>(res, {
+        statusCode: httpStatus.OK,
         success: true,
         message: "Semester created successfully",
         data: result,
-    });
+    })
 });
 
 

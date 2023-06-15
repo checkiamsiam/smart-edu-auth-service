@@ -3,6 +3,7 @@ import httpStatus from "http-status";
 import config from "../config";
 import AppError from "../utils/customError.util";
 import { printError } from "../utils/customLogger.util";
+import sendResponse from "../utils/sendResponse.util";
 
 
 type THandleErrorFunc = (err: any, res?: Response) => AppError;
@@ -40,29 +41,31 @@ const handelValidationErrorDB: THandleErrorFunc = (err) => {
 
 const sendErrorProd: THandleErrorResponse = (err, res) => {
   if (!err.isOperational) {
-    res.status(err.statusCode).json({
+    sendResponse(res, {
+      statusCode: err.statusCode,
       success: false,
-      message: "Something went wrong",
-    });
+      message: "Something went wrong"
+    })
   } else {
     printError.error("Error 💥" + err);
     // 2. Send generic message to client
-    res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
+    sendResponse(res, {
+      statusCode: httpStatus.INTERNAL_SERVER_ERROR,
       success: false,
       message: "Something went wrong",
-      error: err.message,
-    });
+      errorMessage: err.message
+    })
   }
 };
 
 // send errorDevelopment to client
 const sendErrorDev: THandleErrorResponse = (err, res) => {
-  res.status(err.statusCode).json({
+  sendResponse(res, {
+    statusCode: err.statusCode,
     success: false,
-    message: err.message,
-    error: err,
+    errorMessage: err.message,
     stack: err.stack,
-  });
+  })
 };
 
 // globalErrorHandler
