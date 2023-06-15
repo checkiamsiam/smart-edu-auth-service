@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-export const createUserReq = z.object({
+const createUserReq = z.object({
   body: z.object({
-    role: z.enum(["admin", "student", "faculty"], {
+    role: z.enum(["admin", "student", "faculty"] as [string, ...string[]], {
       invalid_type_error: "Role Must be admin,student or faculty"
     }),
     password: z.string({
@@ -11,3 +11,8 @@ export const createUserReq = z.object({
     }),
   })
 })
+
+
+const userValidations = { createUserReq }
+
+export default userValidations

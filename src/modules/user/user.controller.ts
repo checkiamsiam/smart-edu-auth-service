@@ -12,6 +12,9 @@ const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {
   });
 });
 
-export default {
-  createUser,
-};
+
+const userController = { createUser }
+
+export default userController
+
+

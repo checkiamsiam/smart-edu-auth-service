@@ -11,7 +11,10 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
     title: {
       type: String,
       required: true,
-      enum: academicSemesterTitles,
+      enum: {
+        values: academicSemesterTitles,
+        message: "{VALUE} is not supported."
+      },
     },
     year: {
       type: String,
@@ -20,17 +23,26 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
     code: {
       type: String,
       required: true,
-      enum: academicSemesterCodes,
+      enum: {
+        values: academicSemesterCodes,
+        message: "{VALUE} is not supported."
+      },
     },
     startMonth: {
       type: String,
       required: true,
-      enum: acdemicSemesterMonths,
+      enum: {
+        values: acdemicSemesterMonths,
+        message: "{VALUE} is not supported."
+      },
     },
     endMonth: {
       type: String,
       required: true,
-      enum: acdemicSemesterMonths,
+      enum: {
+        values: acdemicSemesterMonths,
+        message: "{VALUE} is not supported."
+      },
     },
   },
   {
