@@ -18,7 +18,7 @@ const logStream = (filename: string) =>
     interval: "1d",
     path: infosDir,
     maxFiles: 7,
-    maxSize: "100K"
+    maxSize: "100K",
   });
 
 const errorLogStream = (filename: string) =>
@@ -26,58 +26,65 @@ const errorLogStream = (filename: string) =>
     interval: "1d",
     path: errorsDir,
     maxFiles: 7,
-    maxSize: "100K"
+    maxSize: "100K",
   });
 
+const printTargets = config.isDevelopment
+  ? [{ target: "pino-pretty", level: "info", options: { colorize: true } }]
+  : [
+      { target: "pino-pretty", level: "info", options: { colorize: true } },
+      {
+        level: "info",
+        target: "pino/file",
+        options: {
+          destination: path.join(infosDir, "app.info.log"),
+          flags: "a",
+        },
+      },
+    ];
 
+const printErrTargets = config.isDevelopment
+  ? [{ target: "pino-pretty", level: "error", options: { colorize: true } }]
+  : [
+      { target: "pino-pretty", level: "error", options: { colorize: true } },
+      {
+        level: "error",
+        target: "pino/file",
+        options: {
+          destination: path.join(errorsDir, "app.error.log"),
+          flags: "a",
+        },
+      },
+    ];
 
-const printTargets = config.isDevelopment ? [{ target: "pino-pretty", level: "info", options: { colorize: true } }] : [
-  { target: "pino-pretty", level: "info", options: { colorize: true } },
+const print = pino(
   {
     level: "info",
-    target: "pino/file",
-    options: {
-      destination: path.join(infosDir, "app.info.log"),
-      flags: "a",
+    transport: {
+      targets: printTargets,
+      options: {
+        colorize: true,
+      },
     },
+    prettifier: PinoPretty,
+    timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
   },
-]
+  logStream("app.info.log")
+);
 
-const printErrTargets = config.isDevelopment ? [{ target: "pino-pretty", level: "error", options: { colorize: true } }] : [
-  { target: "pino-pretty", level: "error", options: { colorize: true } },
+const printError = pino(
   {
     level: "error",
-    target: "pino/file",
-    options: {
-      destination: path.join(errorsDir, "app.error.log"),
-      flags: "a",
+    transport: {
+      targets: printErrTargets,
+      options: {
+        colorize: true,
+      },
     },
+    prettifier: PinoPretty,
+    timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
   },
-]
-
-
-const print = pino({
-  level: "info",
-  transport: {
-    targets: printTargets,
-    options: {
-      colorize: true,
-    },
-  },
-  prettifier: PinoPretty,
-  timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
-}, logStream("app.info.log"));
-
-const printError = pino({
-  level: "error",
-  transport: {
-    targets: printErrTargets,
-    options: {
-      colorize: true,
-    },
-  },
-  prettifier: PinoPretty,
-  timestamp: () => `,"time":"${dayjs().format("D MMMM, YYYY [at] h:mm A")}"`,
-}, errorLogStream("app.error.log"));
+  errorLogStream("app.error.log")
+);
 
 export { print, printError };

@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
   sendResponse(res, {
     statusCode: 200,
     success: true,
-    message: "Welcome to smart edu server"
-  })
+    message: "Welcome to smart edu server",
+  });
 });
 
 // Not found catch
@@ -40,8 +40,8 @@ app.all("*", (req, res) => {
   sendResponse(res, {
     statusCode: 200,
     success: false,
-    message: "Adress not found"
-  })
+    message: "Adress not found",
+  });
 });
 
 // error handling middleware

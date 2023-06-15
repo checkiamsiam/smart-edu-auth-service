@@ -13,12 +13,9 @@ const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {
     success: true,
     message: "User created successfully",
     data: result,
-  })
+  });
 });
 
+const userController = { createUser };
 
-const userController = { createUser }
-
-export default userController
-
-
+export default userController;

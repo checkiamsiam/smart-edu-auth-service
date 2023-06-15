@@ -4,7 +4,7 @@
   "description": "SmartEdu: Streamlined Education Management Software",
   "main": "src/index.js",
   "scripts": {
-    "dev": "set NODE_ENV=development&&ts-node-dev --rs --poll ./src/index.ts",
+    "dev": "set NODE_ENV=development&&ts-node-dev --files --rs --poll ./src/index.ts",
     "build": "tsc",
     "start": "tsc&&node ./dist/index.js",
     "lint": "eslint .",

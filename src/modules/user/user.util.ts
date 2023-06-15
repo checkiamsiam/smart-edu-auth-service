@@ -4,11 +4,8 @@ const generateNewID = (lastId: string | null): string => {
   return incrementedId;
 };
 
-
-
-
 const userUtils = {
   generateNewID,
 };
 
-export default userUtils
+export default userUtils;

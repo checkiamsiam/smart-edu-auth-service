@@ -5,10 +5,8 @@ import AppError from "../utils/customError.util";
 import { printError } from "../utils/customLogger.util";
 import sendResponse from "../utils/sendResponse.util";
 
-
 type THandleErrorFunc = (err: any, res?: Response) => AppError;
 type THandleErrorResponse = (err: any, res: Response) => void;
-
 
 // handel cast error db
 const handelCastErrorDB: THandleErrorFunc = (err) => {
@@ -38,14 +36,13 @@ const handelValidationErrorDB: THandleErrorFunc = (err) => {
   }
 };
 
-
 const sendErrorProd: THandleErrorResponse = (err, res) => {
   if (!err.isOperational) {
     sendResponse(res, {
       statusCode: err.statusCode,
       success: false,
-      message: "Something went wrong"
-    })
+      message: "Something went wrong",
+    });
   } else {
     printError.error("Error 💥" + err);
     // 2. Send generic message to client
@@ -53,8 +50,8 @@ const sendErrorProd: THandleErrorResponse = (err, res) => {
       statusCode: httpStatus.INTERNAL_SERVER_ERROR,
       success: false,
       message: "Something went wrong",
-      errorMessage: err.message
-    })
+      errorMessage: err.message,
+    });
   }
 };
 
@@ -65,7 +62,7 @@ const sendErrorDev: THandleErrorResponse = (err, res) => {
     success: false,
     errorMessage: err.message,
     stack: err.stack,
-  })
+  });
 };
 
 // globalErrorHandler
@@ -85,13 +82,18 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     err = handelValidationErrorDB(err);
   }
 
-
   if (err.name === "JsonWebTokenError") {
-    err = new AppError("Invalid token. Please log in again!", httpStatus.UNAUTHORIZED);
+    err = new AppError(
+      "Invalid token. Please log in again!",
+      httpStatus.UNAUTHORIZED
+    );
   }
 
   if (err.name === "TokenExpiredError") {
-    err = new AppError("Token expired. Please log in again!", httpStatus.UNAUTHORIZED);
+    err = new AppError(
+      "Token expired. Please log in again!",
+      httpStatus.UNAUTHORIZED
+    );
   }
 
   if (config.isDevelopment) {

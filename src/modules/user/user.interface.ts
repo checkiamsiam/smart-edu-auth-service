@@ -1,6 +1,6 @@
 import { Model } from "mongoose";
 
-export type userRole = "student" | "faculty" | "admin"
+export type userRole = "student" | "faculty" | "admin";
 
 export type IUser = {
   id: string;

@@ -30,10 +30,9 @@ const createUser = async (user: IUser): Promise<IUser> => {
   return newUser;
 };
 
-
 const userService = {
   getLastId,
   createUser,
 };
 
-export default userService
+export default userService;
