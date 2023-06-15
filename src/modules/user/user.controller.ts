@@ -1,17 +1,21 @@
-import { Request, Response } from "express";
-import catchAsyncErrors from "../../utils/catchAsyncError";
+import { RequestHandler } from "express";
+import httpStatus from "http-status";
+import catchAsyncErrors from "../../utils/catchAsyncError.util";
+import sendResponse from "../../utils/sendResponse.util";
+import { IUser } from "./user.interface";
 import userService from "./user.service";
 
-const createUser = catchAsyncErrors(async (req: Request, res: Response) => {
+const createUser: RequestHandler = catchAsyncErrors(async (req, res) => {
   const userData = req.body;
   const result = await userService.createUser(userData);
-  res.status(200).json({
+  sendResponse<IUser>(res, {
+    statusCode: httpStatus.OK,
     success: true,
     message: "User created successfully",
     data: result,
   });
 });
 
-export default {
-  createUser,
-};
+const userController = { createUser };
+
+export default userController;

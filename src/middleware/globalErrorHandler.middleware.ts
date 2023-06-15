@@ -1,13 +1,17 @@
+import { ErrorRequestHandler, Response } from "express";
+import httpStatus from "http-status";
 import config from "../config";
-import { THandleErrorFunc, THandleErrorResponse } from "../types/ErrorTypes";
-import { TErrorMiddleware } from "../types/milldewareTypes";
-import AppError from "../utils/CustomError";
-import { print } from "../utils/customPrint";
+import AppError from "../utils/customError.util";
+import { printError } from "../utils/customLogger.util";
+import sendResponse from "../utils/sendResponse.util";
+
+type THandleErrorFunc = (err: any, res?: Response) => AppError;
+type THandleErrorResponse = (err: any, res: Response) => void;
 
 // handel cast error db
 const handelCastErrorDB: THandleErrorFunc = (err) => {
   const message = `Invalid ${err.path}: ${err.value}.`;
-  return new AppError(message, 400);
+  return new AppError(message, httpStatus.BAD_REQUEST);
 };
 
 // handel duplicate error
@@ -18,50 +22,52 @@ const handelDuplicateErrorDB: THandleErrorFunc = (err) => {
       /['"]+/g,
       ""
     );
-  return new AppError(message, 400);
+  return new AppError(message, httpStatus.BAD_REQUEST);
 };
 
-// handel validation error
+// handel validation ( mongoose + zod ) error
 const handelValidationErrorDB: THandleErrorFunc = (err) => {
   try {
     const errors = Object.values(err.errors).map((el: any) => el.message);
     const message = `Invalid input data. ${errors.join(". ")}`;
-    return new AppError(message, 400);
+    return new AppError(message, httpStatus.BAD_REQUEST);
   } catch (error) {
     return new AppError(err.message, 400);
   }
 };
 
 const sendErrorProd: THandleErrorResponse = (err, res) => {
-  if (err.isOperational) {
-    res.status(err.statusCode).json({
-      success: false,
-      message: err.message,
-    });
-  } else {
-    print.error("Error 💥", err);
-    // 2. Send generic message to client
-    res.status(500).json({
+  if (!err.isOperational) {
+    sendResponse(res, {
+      statusCode: err.statusCode,
       success: false,
       message: "Something went wrong",
-      error: err.message,
+    });
+  } else {
+    printError.error("Error 💥" + err);
+    // 2. Send generic message to client
+    sendResponse(res, {
+      statusCode: httpStatus.INTERNAL_SERVER_ERROR,
+      success: false,
+      message: "Something went wrong",
+      errorMessage: err.message,
     });
   }
 };
 
 // send errorDevelopment to client
 const sendErrorDev: THandleErrorResponse = (err, res) => {
-  res.status(err.statusCode).json({
+  sendResponse(res, {
+    statusCode: err.statusCode,
     success: false,
-    message: err.message,
-    error: err,
+    errorMessage: err.message,
     stack: err.stack,
   });
 };
 
 // globalErrorHandler
-const globalErrorHandler: TErrorMiddleware = (err, req, res, next) => {
-  err.statusCode = err.statusCode || 500;
+const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
+  err.statusCode = err.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
   err.status = err.status || "error";
 
   if (err.name === "CastError") {
@@ -72,16 +78,22 @@ const globalErrorHandler: TErrorMiddleware = (err, req, res, next) => {
     err = handelDuplicateErrorDB(err);
   }
 
-  if (err.name === "ValidationError") {
+  if (err.name === "ValidationError" || err.name === "ZodError") {
     err = handelValidationErrorDB(err);
   }
 
   if (err.name === "JsonWebTokenError") {
-    err = new AppError("Invalid token. Please log in again!", 401);
+    err = new AppError(
+      "Invalid token. Please log in again!",
+      httpStatus.UNAUTHORIZED
+    );
   }
 
   if (err.name === "TokenExpiredError") {
-    err = new AppError("Token expired. Please log in again!", 401);
+    err = new AppError(
+      "Token expired. Please log in again!",
+      httpStatus.UNAUTHORIZED
+    );
   }
 
   if (config.isDevelopment) {

@@ -1,6 +1,6 @@
 import { IUser } from "./user.interface";
 import { User } from "./user.model";
-import util from "./user.util";
+import userUtils from "./user.util";
 
 const getLastId = async (): Promise<string | null> => {
   const lastId = await User.aggregate([
@@ -22,15 +22,17 @@ const getLastId = async (): Promise<string | null> => {
   return lastId[0]?.id || null;
 };
 
-const createUser = async (user: IUser): Promise<IUser | null> => {
+const createUser = async (user: IUser): Promise<IUser> => {
   const lastId = await getLastId();
-  const newId = util.generateNewID(lastId);
+  const newId = userUtils.generateNewID(lastId);
   user.id = newId;
   const newUser = await User.create(user);
   return newUser;
 };
 
-export default {
+const userService = {
   getLastId,
   createUser,
 };
+
+export default userService;
