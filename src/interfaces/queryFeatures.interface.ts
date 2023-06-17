@@ -4,7 +4,7 @@ interface IQueryFeatures {
   skip: number;
   fields: { [key: string]: number };
   filters: object;
-  sort: { [key: string]: number };
+  sort: { [key: string]: -1 | 1 };
 }
 
 export default IQueryFeatures;

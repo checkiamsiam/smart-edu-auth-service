@@ -67,6 +67,7 @@ const sendErrorDev: THandleErrorResponse = (err, res) => {
 
 // globalErrorHandler
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
+  console.log(err)
   err.statusCode = err.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
   err.status = err.status || "error";
 

@@ -90,3 +90,390 @@
 {"level":30,"time":"15 June, 2023 at 11:23 AM","pid":52300,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
 {"level":30,"time":"15 June, 2023 at 11:23 AM","pid":52300,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
 {"level":30,"time":"15 June, 2023 at 11:26 AM","pid":56616,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 4:58 AM","pid":4848,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:02 AM","pid":4848,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:02 AM","pid":4848,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:03 AM","pid":7104,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:03 AM","pid":7104,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:03 AM","pid":7104,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:03 AM","pid":7205,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7205,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7205,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7553,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7553,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7553,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7669,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7669,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:04 AM","pid":7669,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:30 AM","pid":19282,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:32 AM","pid":19282,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:32 AM","pid":19282,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:32 AM","pid":20143,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:32 AM","pid":20143,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:32 AM","pid":20143,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20505,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20505,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20505,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20569,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20594,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20594,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20594,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20682,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20682,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":20682,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":21036,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":21036,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 5:33 AM","pid":21036,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:03 AM","pid":33761,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:04 AM","pid":33761,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:04 AM","pid":33761,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:04 AM","pid":34118,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:05 AM","pid":34118,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:05 AM","pid":34118,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:05 AM","pid":34413,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":34413,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":34413,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35490,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35490,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35490,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35568,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35568,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:07 AM","pid":35568,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:08 AM","pid":35790,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:09 AM","pid":35790,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:09 AM","pid":35790,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:11 AM","pid":37662,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:11 AM","pid":37662,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:11 AM","pid":37662,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":37909,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":37909,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":37909,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38127,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38127,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38127,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38218,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38218,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38218,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38297,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38297,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:12 AM","pid":38297,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:14 AM","pid":39455,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":39455,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":39455,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":40457,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":40457,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":40457,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:17 AM","pid":40845,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":40845,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":40845,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":41221,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":41221,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":41221,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:18 AM","pid":41535,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":41535,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":41535,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":41677,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":41677,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":41677,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":42308,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":42308,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":42308,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:19 AM","pid":42416,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":42416,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":42416,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":43248,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":43248,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":43248,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 6:21 AM","pid":43397,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 6:22 AM","pid":43586,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 9:52 AM","pid":2328,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 9:52 AM","pid":2328,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 9:52 AM","pid":2328,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 9:52 AM","pid":2637,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 9:54 AM","pid":2637,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 9:54 AM","pid":2637,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 9:54 AM","pid":3460,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 9:54 AM","pid":3525,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 9:56 AM","pid":3525,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 9:56 AM","pid":3525,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 9:57 AM","pid":4727,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 9:59 AM","pid":4727,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 9:59 AM","pid":4727,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 9:59 AM","pid":5666,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":5666,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":5666,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6104,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6104,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6104,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6298,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6298,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6298,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:00 AM","pid":6502,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":6502,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":6502,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7110,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7110,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7110,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7213,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7213,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7213,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:02 AM","pid":7479,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":7479,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":7479,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":8017,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":8080,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":8080,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":8080,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:04 AM","pid":8382,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":8382,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":8382,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":9712,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":9712,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":9712,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:08 AM","pid":9787,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:11 AM","pid":9787,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:11 AM","pid":9787,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:11 AM","pid":10978,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":10978,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":10978,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11355,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11355,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11355,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11494,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11494,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11494,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11716,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11716,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11716,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11841,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11841,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11841,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:12 AM","pid":11941,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:17 AM","pid":11941,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:17 AM","pid":11941,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:17 AM","pid":13856,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:18 AM","pid":13856,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:18 AM","pid":13856,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:18 AM","pid":14173,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:23 AM","pid":14173,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:23 AM","pid":14173,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:23 AM","pid":16172,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:24 AM","pid":16172,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:24 AM","pid":16172,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:24 AM","pid":16635,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:24 AM","pid":16678,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":16678,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":16678,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":16913,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":16913,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":16913,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:25 AM","pid":17012,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:26 AM","pid":17012,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:26 AM","pid":17012,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:26 AM","pid":17363,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":17363,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":17363,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":17821,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":17821,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":17821,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":18221,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":18221,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":18221,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:27 AM","pid":18457,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:28 AM","pid":18457,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:28 AM","pid":18457,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:28 AM","pid":18811,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:29 AM","pid":18811,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:29 AM","pid":18811,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:29 AM","pid":19368,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:34 AM","pid":19368,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:34 AM","pid":19368,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:34 AM","pid":21228,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21450,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21450,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21450,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21630,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21630,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21630,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21690,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21690,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21690,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21760,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21760,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21760,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21945,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21945,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":21945,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":22098,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":22098,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:35 AM","pid":22098,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:36 AM","pid":22176,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:36 AM","pid":22176,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:36 AM","pid":22176,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:36 AM","pid":22528,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:37 AM","pid":22528,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:37 AM","pid":22528,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:37 AM","pid":23075,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23075,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23075,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23441,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23517,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23517,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23517,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:38 AM","pid":23547,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:39 AM","pid":23547,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:39 AM","pid":23547,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:39 AM","pid":24051,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:40 AM","pid":24051,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:40 AM","pid":24051,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:41 AM","pid":24825,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:45 AM","pid":24825,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:45 AM","pid":24825,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:45 AM","pid":26930,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":26930,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":26930,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":27447,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":27447,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":27447,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:46 AM","pid":27523,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":27523,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":27523,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":27957,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":28033,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":28033,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":28033,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:47 AM","pid":28089,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28089,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28089,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28809,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28809,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28809,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28872,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28872,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":28872,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:49 AM","pid":29323,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:50 AM","pid":29323,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:50 AM","pid":29323,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:51 AM","pid":30531,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:52 AM","pid":30531,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:52 AM","pid":30531,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:52 AM","pid":30646,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:52 AM","pid":30646,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:52 AM","pid":30646,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:53 AM","pid":31100,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:53 AM","pid":31100,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:53 AM","pid":31100,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:53 AM","pid":31267,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:54 AM","pid":31267,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:54 AM","pid":31267,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:54 AM","pid":31714,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:55 AM","pid":31714,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:55 AM","pid":31714,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:55 AM","pid":32368,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":32368,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":32368,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33332,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33332,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33332,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33390,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33390,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33390,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:58 AM","pid":33619,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:59 AM","pid":33619,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:59 AM","pid":33619,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 10:59 AM","pid":34253,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 10:59 AM","pid":34253,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 10:59 AM","pid":34253,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:01 AM","pid":35363,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:01 AM","pid":35363,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:01 AM","pid":35363,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:01 AM","pid":35640,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35640,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35640,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35827,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35827,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35827,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35859,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35859,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":35859,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:02 AM","pid":36107,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36107,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36107,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36438,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36438,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36438,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36512,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36512,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36512,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:03 AM","pid":36594,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":36594,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":36594,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37322,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37322,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37322,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37539,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37539,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37539,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:04 AM","pid":37617,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37617,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37617,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37764,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37764,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37764,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37971,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37971,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":37971,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":38103,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":38103,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":38103,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:05 AM","pid":38280,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:06 AM","pid":38280,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:06 AM","pid":38280,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:06 AM","pid":38455,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:08 AM","pid":39221,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:08 AM","pid":39221,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:08 AM","pid":39221,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:08 AM","pid":39647,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":39647,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":39647,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":39853,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":39853,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":39853,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":40022,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":40022,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":40022,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:09 AM","pid":40091,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:10 AM","pid":40091,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:10 AM","pid":40091,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:10 AM","pid":40512,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:10 AM","pid":40512,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:10 AM","pid":40512,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":40944,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":40944,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":40944,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41270,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41270,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41270,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41337,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41337,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41337,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41560,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41560,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41560,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41740,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41740,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:11 AM","pid":41740,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":41889,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":41889,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":41889,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":42099,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":42099,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":42099,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:12 AM","pid":42342,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:13 AM","pid":42342,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:13 AM","pid":42342,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:14 AM","pid":42921,"hostname":"codespaces-b74340","msg":"Database connected"}
+{"level":30,"time":"17 June, 2023 at 11:14 AM","pid":42921,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:14 AM","pid":42921,"hostname":"codespaces-b74340","msg":"💥 Process terminated!"}
+{"level":30,"time":"17 June, 2023 at 11:14 AM","pid":43204,"hostname":"codespaces-b74340","msg":"👋 SIGTERM RECEIVED. Shutting down gracefully"}
+{"level":30,"time":"17 June, 2023 at 11:14 AM","pid":43238,"hostname":"codespaces-b74340","msg":"Database connected"}

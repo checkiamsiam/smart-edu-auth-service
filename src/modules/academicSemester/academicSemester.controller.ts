@@ -4,7 +4,7 @@ import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import AppError from "../../utils/customError.util";
 import sendResponse from "../../utils/sendResponse.util";
 import { academicSemesterTitleCodeMapper } from "./academicSemester.constant";
-import { IAcademicSemester } from "./academicSemester.interface";
+import { IAcademicSemester, PIAcademicSemester } from "./academicSemester.interface";
 import academicSemesterService from "./academicSemester.service";
 
 const createAcademicSemester: RequestHandler = catchAsyncErrors(
@@ -24,7 +24,17 @@ const createAcademicSemester: RequestHandler = catchAsyncErrors(
 );
 const getAcademicSemesters: RequestHandler = catchAsyncErrors(
   async (req, res) => {
-    res.send(req.queryFeatures);
+    const getResult = await academicSemesterService.getAcademicSemesters(req.queryFeatures)
+    sendResponse<PIAcademicSemester[]>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: getResult.data,
+      meta: {
+        page: req.queryFeatures.page,
+        limit: req.queryFeatures.limit,
+        total: getResult.total
+      }
+    });
   }
 );
 

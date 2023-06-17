@@ -7,12 +7,12 @@ const queryFeatures: RequestHandler = (req, res, next) => {
   const limit: number = parseInt(req.query.limit as string) || 5;
   const skip: number = (page - 1) * limit;
 
-  let sort: string = req.query.sort ? String(req.query.sort) : "createdAt";
+  let sort: string = String(req.query.sort);
   sort = sort.split(",").join(" ");
 
   // create sort object
   const sortObj: {
-    [key: string]: number;
+    [key: string]: 1 | -1;
   } = {};
 
   sort.split(" ").forEach((el) => {
