@@ -13,6 +13,4 @@ export interface IAcademicSemester {
   endMonth: TMonthsName;
 }
 
-export type PIAcademicSemester = Partial<IAcademicSemester>
-
 export type AcademicSemesterModel = Model<IAcademicSemester, object>;

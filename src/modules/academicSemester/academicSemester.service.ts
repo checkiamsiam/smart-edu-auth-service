@@ -1,6 +1,6 @@
 import { PipelineStage } from "mongoose";
-import IQueryFeatures from "../../interfaces/queryFeatures.interface";
-import { IAcademicSemester, PIAcademicSemester } from "./academicSemester.interface";
+import { IQueryFeatures, IQueryResult } from "../../interfaces/queryFeatures.interface";
+import { IAcademicSemester } from "./academicSemester.interface";
 import { AcademicSemester } from "./academicSemester.model";
 
 const create = async (
@@ -10,23 +10,18 @@ const create = async (
   return newSemester;
 };
 
-interface AcademicSemesterResult {
-  data: PIAcademicSemester[];
-  total: number;
-}
-
-const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<AcademicSemesterResult> => {
-  console.log(queryFeatures)
+const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<IQueryResult<IAcademicSemester>> => {
+  const conditionalStage: PipelineStage = Object.keys(queryFeatures.fields).length > 0 ? { $project: queryFeatures.fields } : {
+    $addFields: {}
+  }
   const pipeline: PipelineStage[] = [
     {
-      $match:  queryFeatures.filters
+      $match: queryFeatures.filters
     },
     {
-      $sort: queryFeatures.sort ? queryFeatures.sort : { createdAt: 1 } 
+      $sort: queryFeatures.sort
     },
-    // {
-    //   $project: queryFeatures.fields ? queryFeatures.fields : { _id: 1 }
-    // },
+    conditionalStage,
     {
       $facet: {
         data: [{ $skip: queryFeatures.skip }, { $limit: queryFeatures.limit }],
@@ -42,7 +37,7 @@ const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<Acad
   ];
 
 
-  const [result]: AcademicSemesterResult[] = await AcademicSemester.aggregate<AcademicSemesterResult>(pipeline);
+  const [result]: IQueryResult<IAcademicSemester>[] = await AcademicSemester.aggregate<IQueryResult<IAcademicSemester>>(pipeline);
 
 
   return result

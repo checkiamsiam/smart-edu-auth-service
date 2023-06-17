@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import IQueryFeatures from "../interfaces/queryFeatures.interface";
+import {IQueryFeatures} from "../interfaces/queryFeatures.interface";
 
 const queryFeatures: RequestHandler = (req, res, next) => {
   // set limit and skip to the request
