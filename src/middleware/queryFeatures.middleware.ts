@@ -26,6 +26,8 @@ const queryFeatures: RequestHandler = (req, res, next) => {
     }
   });
 
+  const fieldsObj: { [key: string]: number } = {};
+
   // select fields
   if (req.query.fields) {
     let fields = String(req.query.fields);
@@ -44,8 +46,6 @@ const queryFeatures: RequestHandler = (req, res, next) => {
   const excludedFields = ["page", "sort", "limit", "fields", "searchKey"];
 
   excludedFields.forEach((el) => delete filters[el]);
-
-  const fieldsObj: { [key: string]: number } = {};
 
   const queryFeaturesObj: IQueryFeatures = {
     page,

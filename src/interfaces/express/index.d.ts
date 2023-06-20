@@ -8,7 +8,7 @@ export {};
 declare global {
   namespace Express {
     export interface Request {
-      queryFeatures : IQueryFeatures;
+      queryFeatures: IQueryFeatures;
     }
   }
 }

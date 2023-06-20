@@ -8,7 +8,6 @@ export interface IQueryFeatures {
   searchKey: string;
 }
 
-
 export interface IQueryResult<T> {
   data: Partial<T>[];
   total: number;

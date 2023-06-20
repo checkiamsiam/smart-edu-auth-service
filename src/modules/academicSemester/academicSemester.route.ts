@@ -4,7 +4,7 @@ import validateRequest from "../../middleware/validateRequest.middleware";
 import academicSemesterController from "./academicSemester.controller";
 import academicSemesterValidation from "./academicSemester.validation";
 
-const academicSemesterRoutes : Router = express.Router();
+const academicSemesterRoutes: Router = express.Router();
 
 academicSemesterRoutes.post(
   "/create",

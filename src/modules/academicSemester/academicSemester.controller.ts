@@ -24,7 +24,9 @@ const createAcademicSemester: RequestHandler = catchAsyncErrors(
 );
 const getAcademicSemesters: RequestHandler = catchAsyncErrors(
   async (req, res) => {
-    const getResult = await academicSemesterService.getAcademicSemesters(req.queryFeatures)
+    const getResult = await academicSemesterService.getAcademicSemesters(
+      req.queryFeatures
+    );
     sendResponse<Partial<IAcademicSemester>[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
@@ -32,8 +34,8 @@ const getAcademicSemesters: RequestHandler = catchAsyncErrors(
       meta: {
         page: req.queryFeatures.page,
         limit: req.queryFeatures.limit,
-        total: getResult.total || 0
-      }
+        total: getResult.total || 0,
+      },
     });
   }
 );
