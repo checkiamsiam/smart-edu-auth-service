@@ -5,6 +5,7 @@ export interface IQueryFeatures {
   fields: { [key: string]: number };
   filters: object;
   sort: { [key: string]: -1 | 1 };
+  searchKey: string;
 }
 
 

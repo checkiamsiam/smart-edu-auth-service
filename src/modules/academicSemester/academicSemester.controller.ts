@@ -32,7 +32,7 @@ const getAcademicSemesters: RequestHandler = catchAsyncErrors(
       meta: {
         page: req.queryFeatures.page,
         limit: req.queryFeatures.limit,
-        total: getResult.total
+        total: getResult.total || 0
       }
     });
   }

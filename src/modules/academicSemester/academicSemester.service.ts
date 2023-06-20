@@ -1,4 +1,5 @@
 import { PipelineStage } from "mongoose";
+import makeQueryFeatureStages from "../../helpers/mongooseAggrigationQueryFeatures.helper";
 import { IQueryFeatures, IQueryResult } from "../../interfaces/queryFeatures.interface";
 import { IAcademicSemester } from "./academicSemester.interface";
 import { AcademicSemester } from "./academicSemester.model";
@@ -11,30 +12,16 @@ const create = async (
 };
 
 const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<IQueryResult<IAcademicSemester>> => {
-  const conditionalStage: PipelineStage = Object.keys(queryFeatures.fields).length > 0 ? { $project: queryFeatures.fields } : {
-    $addFields: {}
-  }
+
+  const queryFeatureStages = makeQueryFeatureStages(queryFeatures, { searchFields: ["title" , "startMonth"] })
+
+
   const pipeline: PipelineStage[] = [
-    {
-      $match: queryFeatures.filters
-    },
-    {
-      $sort: queryFeatures.sort
-    },
-    conditionalStage,
-    {
-      $facet: {
-        data: [{ $skip: queryFeatures.skip }, { $limit: queryFeatures.limit }],
-        total: [{ $count: "total" }]
-      }
-    },
-    {
-      $project: {
-        total: { $arrayElemAt: ["$total.total", 0] },
-        data: 1,
-      }
-    }
-  ];
+
+   
+    // for query features
+    ...queryFeatureStages
+  ]
 
 
   const [result]: IQueryResult<IAcademicSemester>[] = await AcademicSemester.aggregate<IQueryResult<IAcademicSemester>>(pipeline);
