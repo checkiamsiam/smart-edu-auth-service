@@ -13,7 +13,7 @@ const create = async (
 
 const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<IQueryResult<IAcademicSemester>> => {
 
-  const queryFeatureStages = makeQueryFeatureStages(queryFeatures, { searchFields: ["title" , "startMonth"] })
+  const queryFeatureStages : PipelineStage[]  = makeQueryFeatureStages(queryFeatures, { searchFields: ["title" , "startMonth"] })
 
 
   const pipeline: PipelineStage[] = [
