@@ -40,12 +40,22 @@ const queryFeatures: RequestHandler = (req, res, next) => {
   }
 
   // get filters
-  const query = req.query;
-  const filters = { ...query };
+  const query: object = req.query;
+  const filters: { [key: string]: number | string | boolean } = { ...query };
 
   const excludedFields = ["page", "sort", "limit", "fields", "searchKey"];
 
   excludedFields.forEach((el) => delete filters[el]);
+
+  Object.keys(filters).forEach((key) => {
+    if (filters[key] === "true") {
+      filters[key] = true;
+    } else if (filters[key] === "false") {
+      filters[key] = false;
+    } else if (Number(filters[key])) {
+      filters[key] = Number(filters[key]);
+    }
+  });
 
   const queryFeaturesObj: IQueryFeatures = {
     page,

@@ -19,7 +19,7 @@ const getAcademicSemesters = async (
 ): Promise<IQueryResult<IAcademicSemester>> => {
   const queryFeatureStages: PipelineStage[] = makeQueryFeatureStages(
     queryFeatures,
-    { searchFields: ["title", "startMonth"] }
+    { searchFields: ["title", "year"] }
   );
 
   const pipeline: PipelineStage[] = [...queryFeatureStages];

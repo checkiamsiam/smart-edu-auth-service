@@ -25,8 +25,6 @@ const makeQueryFeatureStages = (
     };
   });
 
-  console.log(searchConditions);
-
   const pipeline: PipelineStage[] = [
     {
       $match: {
