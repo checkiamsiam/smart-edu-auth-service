@@ -4,6 +4,7 @@ import config from "../config";
 import AppError from "../utils/customError.util";
 import { printError } from "../utils/customLogger.util";
 import sendResponse from "../utils/sendResponse.util";
+import { log } from "console";
 
 type THandleErrorFunc = (err: any, res?: Response) => AppError;
 type THandleErrorResponse = (err: any, res: Response) => void;
@@ -67,7 +68,6 @@ const sendErrorDev: THandleErrorResponse = (err, res) => {
 
 // globalErrorHandler
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
-  console.log(err)
   err.statusCode = err.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
   err.status = err.status || "error";
 

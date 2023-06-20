@@ -1,6 +1,9 @@
 import { PipelineStage } from "mongoose";
 import makeQueryFeatureStages from "../../helpers/mongooseAggrigationQueryFeatures.helper";
-import { IQueryFeatures, IQueryResult } from "../../interfaces/queryFeatures.interface";
+import {
+  IQueryFeatures,
+  IQueryResult,
+} from "../../interfaces/queryFeatures.interface";
 import { IAcademicSemester } from "./academicSemester.interface";
 import { AcademicSemester } from "./academicSemester.model";
 
@@ -11,27 +14,25 @@ const create = async (
   return newSemester;
 };
 
-const getAcademicSemesters = async (queryFeatures: IQueryFeatures): Promise<IQueryResult<IAcademicSemester>> => {
+const getAcademicSemesters = async (
+  queryFeatures: IQueryFeatures
+): Promise<IQueryResult<IAcademicSemester>> => {
+  const queryFeatureStages: PipelineStage[] = makeQueryFeatureStages(
+    queryFeatures,
+    { searchFields: ["title", "startMonth"] }
+  );
 
-  const queryFeatureStages : PipelineStage[]  = makeQueryFeatureStages(queryFeatures, { searchFields: ["title" , "startMonth"] })
+  const pipeline: PipelineStage[] = [...queryFeatureStages];
 
+  const [result]: IQueryResult<IAcademicSemester>[] =
+    await AcademicSemester.aggregate<IQueryResult<IAcademicSemester>>(pipeline);
 
-  const pipeline: PipelineStage[] = [
-
-   
-    // for query features
-    ...queryFeatureStages
-  ]
-
-
-  const [result]: IQueryResult<IAcademicSemester>[] = await AcademicSemester.aggregate<IQueryResult<IAcademicSemester>>(pipeline);
-
-
-  return result
+  return result;
 };
 
 const academicSemesterService = {
-  create, getAcademicSemesters
+  create,
+  getAcademicSemesters,
 };
 
 export default academicSemesterService;
