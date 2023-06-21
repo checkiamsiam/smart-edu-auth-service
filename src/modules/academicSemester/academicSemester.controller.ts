@@ -1,4 +1,4 @@
-import { RequestHandler } from "express";
+import { Request, RequestHandler, Response } from "express";
 import httpStatus from "http-status";
 import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import AppError from "../../utils/customError.util";
@@ -8,7 +8,7 @@ import { IAcademicSemester } from "./academicSemester.interface";
 import academicSemesterService from "./academicSemester.service";
 
 const createAcademicSemester: RequestHandler = catchAsyncErrors(
-  async (req, res) => {
+  async (req: Request, res: Response) => {
     const body: IAcademicSemester = req.body;
     if (academicSemesterTitleCodeMapper[body.title] !== body.code) {
       throw new AppError("invalid code", httpStatus.BAD_REQUEST);
@@ -23,7 +23,7 @@ const createAcademicSemester: RequestHandler = catchAsyncErrors(
   }
 );
 const getAcademicSemesters: RequestHandler = catchAsyncErrors(
-  async (req, res) => {
+  async (req: Request, res: Response) => {
     const getResult = await academicSemesterService.getAcademicSemesters(
       req.queryFeatures
     );
@@ -39,9 +39,26 @@ const getAcademicSemesters: RequestHandler = catchAsyncErrors(
     });
   }
 );
+const getSigleAcademicSemester: RequestHandler = catchAsyncErrors(
+  async (req: Request, res: Response) => {
+    const id: string = req.params.id
+    const result: Partial<IAcademicSemester> | null = await academicSemesterService.getSingleAcademicSemester(id, req.queryFeatures);
+    if (!result) {
+      throw new AppError("Semester Not Found", httpStatus.NOT_FOUND)
+    }
+    sendResponse<Partial<IAcademicSemester>>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    })
+  }
+);
+
+
 
 const academicSemesterController = {
   createAcademicSemester,
   getAcademicSemesters,
+  getSigleAcademicSemester
 };
 export default academicSemesterController;

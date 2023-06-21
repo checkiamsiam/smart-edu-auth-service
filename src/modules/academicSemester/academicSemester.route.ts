@@ -11,10 +11,18 @@ academicSemesterRoutes.post(
   validateRequest(academicSemesterValidation.createAcademicSemesterReq),
   academicSemesterController.createAcademicSemester
 );
+
 academicSemesterRoutes.get(
   "/get-academic-semesters",
-  queryFeatures,
+  queryFeatures("multiple"),
   academicSemesterController.getAcademicSemesters
 );
+
+academicSemesterRoutes.get(
+  "/get-single-academic-semester/:id",
+  queryFeatures("single"),
+  academicSemesterController.getSigleAcademicSemester
+);
+
 
 export default academicSemesterRoutes;

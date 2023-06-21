@@ -19,7 +19,7 @@ const getAcademicSemesters = async (
 ): Promise<IQueryResult<IAcademicSemester>> => {
   const queryFeatureStages: PipelineStage[] = makeQueryFeatureStages(
     queryFeatures,
-    { searchFields: ["title", "year"] }
+    { searchFields: ["title", "year"], }
   );
 
   const pipeline: PipelineStage[] = [...queryFeatureStages];
@@ -30,9 +30,24 @@ const getAcademicSemesters = async (
   return result;
 };
 
+
+const getSingleAcademicSemester = async (
+  id: string,
+  queryFeatures: IQueryFeatures
+): Promise<Partial<IAcademicSemester> | null> => {
+
+  const result = await AcademicSemester.findById(id).select(queryFeatures.fields)
+
+  return result;
+};
+
+
+
+
 const academicSemesterService = {
   create,
   getAcademicSemesters,
+  getSingleAcademicSemester
 };
 
 export default academicSemesterService;

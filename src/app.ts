@@ -22,7 +22,6 @@ app.use(hpp());
 if (config.isDevelopment) {
   app.use(morgan("dev"));
 }
-
 //routes
 app.use("/api/v1", routes);
 
