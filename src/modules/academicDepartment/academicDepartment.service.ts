@@ -19,24 +19,27 @@ const getAcademicDepartments = async (
 ): Promise<IQueryResult<IAcademicDepartment>> => {
   const queryFeatureStages: PipelineStage[] = makeQueryFeatureStages(
     queryFeatures,
-    { searchFields: ["title"], }
+    { searchFields: ["title"] }
   );
 
   const pipeline: PipelineStage[] = [...queryFeatureStages];
 
   const [result]: IQueryResult<IAcademicDepartment>[] =
-    await AcademicDepartment.aggregate<IQueryResult<IAcademicDepartment>>(pipeline);
+    await AcademicDepartment.aggregate<IQueryResult<IAcademicDepartment>>(
+      pipeline
+    );
 
   return result;
 };
-
 
 const getSingleAcademicDepartment = async (
   id: string,
   queryFeatures: IQueryFeatures
 ): Promise<Partial<IAcademicDepartment> | null> => {
-
-  const result: Partial<IAcademicDepartment> | null = await AcademicDepartment.findById(id).select(queryFeatures.fields).populate("academicFaculty")
+  const result: Partial<IAcademicDepartment> | null =
+    await AcademicDepartment.findById(id)
+      .select(queryFeatures.fields)
+      .populate("academicFaculty");
 
   return result;
 };
@@ -45,30 +48,27 @@ const updateAcademicDepartment = async (
   id: string,
   payload: Partial<IAcademicDepartment>
 ): Promise<Partial<IAcademicDepartment> | null> => {
-
-  const result: Partial<IAcademicDepartment> | null = await AcademicDepartment.findByIdAndUpdate(id, payload, { new: true }).lean()
-
-  return result;
-};
-
-const deleteAcademicDepartment = async (
-  id: string
-) => {
-
-  const result: Partial<IAcademicDepartment> | null = await AcademicDepartment.findByIdAndDelete(id).lean()
+  const result: Partial<IAcademicDepartment> | null =
+    await AcademicDepartment.findByIdAndUpdate(id, payload, {
+      new: true,
+    }).lean();
 
   return result;
 };
 
+const deleteAcademicDepartment = async (id: string) => {
+  const result: Partial<IAcademicDepartment> | null =
+    await AcademicDepartment.findByIdAndDelete(id).lean();
 
-
+  return result;
+};
 
 const academicDepartmentService = {
   create,
   getAcademicDepartments,
   getSingleAcademicDepartment,
   updateAcademicDepartment,
-  deleteAcademicDepartment
+  deleteAcademicDepartment,
 };
 
 export default academicDepartmentService;

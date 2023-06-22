@@ -13,13 +13,13 @@ academicSemesterRoutes.post(
 );
 
 academicSemesterRoutes.get(
-  "/get-academic-semesters",
+  "/",
   queryFeatures("multiple"),
   academicSemesterController.getAcademicSemesters
 );
 
 academicSemesterRoutes.get(
-  "/get-single-academic-semester/:id",
+  "/:id",
   queryFeatures("single"),
   academicSemesterController.getSigleAcademicSemester
 );
@@ -34,6 +34,5 @@ academicSemesterRoutes.delete(
   "/delete/:id",
   academicSemesterController.deleteAcademicSemester
 );
-
 
 export default academicSemesterRoutes;

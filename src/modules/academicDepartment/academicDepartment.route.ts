@@ -4,7 +4,6 @@ import validateRequest from "../../middleware/validateRequest.middleware";
 import academicDepartmentController from "./academicDepartment.controller";
 import academicDepartmentValidation from "./academicDepartment.validation";
 
-
 const academicDepartmentRoutes: Router = express.Router();
 
 academicDepartmentRoutes.post(
@@ -14,13 +13,13 @@ academicDepartmentRoutes.post(
 );
 
 academicDepartmentRoutes.get(
-  "/get-academic-departments",
+  "/",
   queryFeatures("multiple"),
   academicDepartmentController.getAcademicDepartments
 );
 
 academicDepartmentRoutes.get(
-  "/get-single-academic-department/:id",
+  "/:id",
   queryFeatures("single"),
   academicDepartmentController.getSigleAcademicDepartment
 );
@@ -35,6 +34,5 @@ academicDepartmentRoutes.delete(
   "/delete/:id",
   academicDepartmentController.deleteAcademicDepartment
 );
-
 
 export default academicDepartmentRoutes;
