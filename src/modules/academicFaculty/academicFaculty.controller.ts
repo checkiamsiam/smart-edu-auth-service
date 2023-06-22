@@ -38,60 +38,63 @@ const getAcademicFaculties: RequestHandler = catchAsyncErrors(
 );
 const getSigleAcademicFaculty: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
-    const id: string = req.params.id
-    const result: Partial<IAcademicFaculty> | null = await academicFacultyService.getSingleAcademicFaculty(id, req.queryFeatures);
+    const id: string = req.params.id;
+    const result: Partial<IAcademicFaculty> | null =
+      await academicFacultyService.getSingleAcademicFaculty(
+        id,
+        req.queryFeatures
+      );
     if (!result) {
-      throw new AppError("Academic Faculty Not Found", httpStatus.NOT_FOUND)
+      throw new AppError("Academic Faculty Not Found", httpStatus.NOT_FOUND);
     }
     sendResponse<Partial<IAcademicFaculty>>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      data: result
-    })
+      data: result,
+    });
   }
 );
 
 const updateAcademicFaculty: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
-    const id: string = req.params.id
+    const id: string = req.params.id;
     const updatePayload: Partial<IAcademicFaculty> = req.body;
-    const result: Partial<IAcademicFaculty> | null = await academicFacultyService.updateAcademicFaculty(id, updatePayload);
+    const result: Partial<IAcademicFaculty> | null =
+      await academicFacultyService.updateAcademicFaculty(id, updatePayload);
 
     if (!result) {
-      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND)
+      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND);
     }
     sendResponse<Partial<IAcademicFaculty>>(res, {
       statusCode: httpStatus.OK,
       success: true,
       message: "Document Updated Successfully",
-      data: result
-    })
+      data: result,
+    });
   }
 );
 const deleteAcademicFaculty: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
-    const id: string = req.params.id
+    const id: string = req.params.id;
 
     const result = await academicFacultyService.deleteAcademicFaculty(id);
 
     if (!result) {
-      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND)
+      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND);
     }
     sendResponse<Partial<IAcademicFaculty>>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: "Document Deleted Successfully"
-    })
+      message: "Document Deleted Successfully",
+    });
   }
 );
-
-
 
 const academicFacultyController = {
   createAcademicFaculty,
   getAcademicFaculties,
   getSigleAcademicFaculty,
   updateAcademicFaculty,
-  deleteAcademicFaculty
+  deleteAcademicFaculty,
 };
 export default academicFacultyController;

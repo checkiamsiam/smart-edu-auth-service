@@ -1,18 +1,24 @@
 import { Schema, model } from "mongoose";
-import { AcademicDepartmentModel, IAcademicDepartment } from "./academicDepartment.interface";
+import {
+  AcademicDepartmentModel,
+  IAcademicDepartment,
+} from "./academicDepartment.interface";
 
-const AcademicDepartmentSchema = new Schema<IAcademicDepartment, AcademicDepartmentModel>(
+const AcademicDepartmentSchema = new Schema<
+  IAcademicDepartment,
+  AcademicDepartmentModel
+>(
   {
     title: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
     },
     academicFaculty: {
       type: Schema.Types.ObjectId,
       ref: "AcademicFaculty",
-      required: true
-    }
+      required: true,
+    },
   },
   {
     timestamps: true,
@@ -22,8 +28,7 @@ const AcademicDepartmentSchema = new Schema<IAcademicDepartment, AcademicDepartm
   }
 );
 
-
-export const AcademicDepartment = model<IAcademicDepartment, AcademicDepartmentModel>(
-  "AcademicDepartment",
-  AcademicDepartmentSchema
-);
+export const AcademicDepartment = model<
+  IAcademicDepartment,
+  AcademicDepartmentModel
+>("AcademicDepartment", AcademicDepartmentSchema);

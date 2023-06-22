@@ -1,8 +1,7 @@
 import { Model } from "mongoose";
 
-
 export interface IAcademicFaculty {
-  title: string ;
+  title: string;
 }
 
 export type AcademicFacultyModel = Model<IAcademicFaculty, object>;

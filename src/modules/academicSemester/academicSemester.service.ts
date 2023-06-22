@@ -19,7 +19,7 @@ const getAcademicSemesters = async (
 ): Promise<IQueryResult<IAcademicSemester>> => {
   const queryFeatureStages: PipelineStage[] = makeQueryFeatureStages(
     queryFeatures,
-    { searchFields: ["title", "year"], }
+    { searchFields: ["title", "year"] }
   );
 
   const pipeline: PipelineStage[] = [...queryFeatureStages];
@@ -30,13 +30,12 @@ const getAcademicSemesters = async (
   return result;
 };
 
-
 const getSingleAcademicSemester = async (
   id: string,
   queryFeatures: IQueryFeatures
 ): Promise<Partial<IAcademicSemester> | null> => {
-
-  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findById(id).select(queryFeatures.fields).lean()
+  const result: Partial<IAcademicSemester> | null =
+    await AcademicSemester.findById(id).select(queryFeatures.fields).lean();
 
   return result;
 };
@@ -45,31 +44,25 @@ const updateAcademicSemester = async (
   id: string,
   payload: Partial<IAcademicSemester>
 ): Promise<Partial<IAcademicSemester> | null> => {
-
-  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findByIdAndUpdate(id, payload, { new: true }).lean()
-
-  return result;
-};
-
-const deleteAcademicSemester = async (
-  id: string
-) => {
-
-  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findByIdAndDelete(id).lean()
-
+  const result: Partial<IAcademicSemester> | null =
+    await AcademicSemester.findByIdAndUpdate(id, payload, { new: true }).lean();
 
   return result;
 };
 
+const deleteAcademicSemester = async (id: string) => {
+  const result: Partial<IAcademicSemester> | null =
+    await AcademicSemester.findByIdAndDelete(id).lean();
 
-
+  return result;
+};
 
 const academicSemesterService = {
   create,
   getAcademicSemesters,
   getSingleAcademicSemester,
   updateAcademicSemester,
-  deleteAcademicSemester
+  deleteAcademicSemester,
 };
 
 export default academicSemesterService;

@@ -1,10 +1,10 @@
 import { RequestHandler } from "express";
 import { IQueryFeatures } from "../interfaces/queryFeatures.interface";
 
-const queryFeatures = (documentNumber: "single" | "multiple"): RequestHandler => {
+const queryFeatures = (
+  documentNumber: "single" | "multiple"
+): RequestHandler => {
   return (req, res, next) => {
-
-
     // set fileds that wanted
     const fieldsObj: { [key: string]: number } = {};
 
@@ -20,15 +20,12 @@ const queryFeatures = (documentNumber: "single" | "multiple"): RequestHandler =>
     }
 
     if (documentNumber === "single") {
-
       const queryFeaturesObj: Partial<IQueryFeatures> = {
-        fields: fieldsObj
-      }
+        fields: fieldsObj,
+      };
 
-      req.queryFeatures = queryFeaturesObj
-
+      req.queryFeatures = queryFeaturesObj;
     } else {
-
       // set limit and skip to the request
       const page: number = parseInt(req.query.page as string) || 1;
       const limit: number = parseInt(req.query.limit as string) || 5;
@@ -53,10 +50,11 @@ const queryFeatures = (documentNumber: "single" | "multiple"): RequestHandler =>
         }
       });
 
-
       // get filters
       const query: object = req.query;
-      const filters: { [key: string]: number | string | boolean } = { ...query };
+      const filters: { [key: string]: number | string | boolean } = {
+        ...query,
+      };
 
       const excludedFields = ["page", "sort", "limit", "fields", "searchKey"];
 
@@ -83,15 +81,10 @@ const queryFeatures = (documentNumber: "single" | "multiple"): RequestHandler =>
       };
 
       req.queryFeatures = queryFeaturesObj;
-
     }
-
-
-
-
 
     next();
   };
-}
+};
 
 export default queryFeatures;
