@@ -19,9 +19,11 @@ type ApiResponseWithoutStatusCode<T> = Omit<IApiResponseData<T>, "statusCode">;
 const sendResponse = <T>(res: Response, data: IApiResponseData<T>): void => {
   const responseData: ApiResponseWithoutStatusCode<T> = {
     success: data.success,
-    message: data.message || null,
+    message: data.message || undefined,
     meta: data.meta || undefined,
-    data: data.data || null,
+    data: data.data || undefined,
+    errorMessage: data.errorMessage || undefined,
+    stack: data.stack || undefined,
   };
 
   res.status(data.statusCode).json(responseData);
