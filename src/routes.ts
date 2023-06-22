@@ -1,4 +1,5 @@
 import express, { Router } from "express";
+import academicDepartmentRoutes from "./modules/academicDepartment/academicDepartment.route";
 import academicFacultyRoutes from "./modules/academicFaculty/academicFaculty.route";
 import academicSemesterRoutes from "./modules/academicSemester/academicSemester.route";
 import userRoutes from "./modules/user/user.route";
@@ -17,6 +18,10 @@ const routes: { path: string; route: Router }[] = [
   {
     path: "/academic-faculty",
     route: academicFacultyRoutes,
+  },
+  {
+    path: "/academic-department",
+    route: academicDepartmentRoutes,
   },
 ];
 

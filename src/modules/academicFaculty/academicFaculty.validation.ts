@@ -13,7 +13,7 @@ const updateAcademicFacultyReq = z.object({
     title: z.string({
       required_error: "Title is must required",
       invalid_type_error: "Title must be a string",
-    })
+    }).optional()
   }),
 });
 
