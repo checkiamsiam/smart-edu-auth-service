@@ -24,5 +24,11 @@ academicSemesterRoutes.get(
   academicSemesterController.getSigleAcademicSemester
 );
 
+academicSemesterRoutes.put(
+  "/update/:id",
+  validateRequest(academicSemesterValidation.updateSemesterReq),
+  academicSemesterController.updateAcademicSemester
+);
+
 
 export default academicSemesterRoutes;

@@ -58,3 +58,13 @@
 {"level":50,"time":"21 June, 2023 at 7:07 AM","pid":53934,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}
 {"level":50,"time":"21 June, 2023 at 7:10 AM","pid":55875,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid _id: 6491d8481948cd3561274cf."}
 {"level":50,"time":"21 June, 2023 at 7:13 AM","pid":57215,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid _id: 6491d8db348e64dd43138f2."}
+{"level":50,"time":"22 June, 2023 at 6:33 AM","pid":36104,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}
+{"level":50,"time":"22 June, 2023 at 6:34 AM","pid":36687,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. title and code are not matching"}
+{"level":50,"time":"22 June, 2023 at 6:36 AM","pid":37713,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Required"}
+{"level":50,"time":"22 June, 2023 at 6:36 AM","pid":37713,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Required"}
+{"level":50,"time":"22 June, 2023 at 6:42 AM","pid":40398,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. title and code are not matching"}
+{"level":50,"time":"22 June, 2023 at 6:52 AM","pid":44465,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Unrecognized key(s) in object: 'mode'"}
+{"level":50,"time":"22 June, 2023 at 6:53 AM","pid":44904,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. title and code are not matching"}
+{"level":50,"time":"22 June, 2023 at 6:58 AM","pid":47268,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. title and code are not matching"}
+{"level":50,"time":"22 June, 2023 at 7:09 AM","pid":52352,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Unrecognized key(s) in object: 'full'"}
+{"level":50,"time":"22 June, 2023 at 7:14 AM","pid":54531,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid _id: 6491d8481948cd3561274cf."}

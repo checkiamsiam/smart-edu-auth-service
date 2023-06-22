@@ -4,7 +4,7 @@ import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import AppError from "../../utils/customError.util";
 import sendResponse from "../../utils/sendResponse.util";
 import { academicSemesterTitleCodeMapper } from "./academicSemester.constant";
-import { IAcademicSemester } from "./academicSemester.interface";
+import { IAcademicSemester, TAcademicSemesterCodes, TAcademicSemesterTitles } from "./academicSemester.interface";
 import academicSemesterService from "./academicSemester.service";
 
 const createAcademicSemester: RequestHandler = catchAsyncErrors(
@@ -22,6 +22,7 @@ const createAcademicSemester: RequestHandler = catchAsyncErrors(
     });
   }
 );
+
 const getAcademicSemesters: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
     const getResult = await academicSemesterService.getAcademicSemesters(
@@ -54,11 +55,35 @@ const getSigleAcademicSemester: RequestHandler = catchAsyncErrors(
   }
 );
 
+const updateAcademicSemester: RequestHandler = catchAsyncErrors(
+  async (req: Request, res: Response) => {
+    const id: string = req.params.id
+    const updatePayload: Partial<IAcademicSemester> = req.body;
+    if (updatePayload.title && !updatePayload.code) {
+      updatePayload.code = academicSemesterTitleCodeMapper[updatePayload.title] as TAcademicSemesterCodes;
+    }
+    if (!updatePayload.title && updatePayload.code) {
+      updatePayload.title = Object.keys(academicSemesterTitleCodeMapper).find(key => academicSemesterTitleCodeMapper[key] === updatePayload.code) as TAcademicSemesterTitles
+    }
+    const result: Partial<IAcademicSemester> | null = await academicSemesterService.updateAcademicSemester(id, updatePayload);
+
+    if (!result) {
+      throw new AppError("Requrested Document not Updated", httpStatus.NOT_FOUND)
+    }
+    sendResponse<Partial<IAcademicSemester>>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      data: result
+    })
+  }
+);
+
 
 
 const academicSemesterController = {
   createAcademicSemester,
   getAcademicSemesters,
-  getSigleAcademicSemester
+  getSigleAcademicSemester,
+  updateAcademicSemester
 };
 export default academicSemesterController;
