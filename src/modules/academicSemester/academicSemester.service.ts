@@ -57,7 +57,6 @@ const deleteAcademicSemester = async (
 
   const result: Partial<IAcademicSemester> | null = await AcademicSemester.findByIdAndDelete(id).lean()
 
-  console.log(result)
 
   return result;
 };

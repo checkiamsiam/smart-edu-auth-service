@@ -66,7 +66,7 @@ academicSemesterSchema.pre("save", async function (next) {
   next();
 });
 
-// modal should defile at last
+// modal should define at last
 export const AcademicSemester = model<IAcademicSemester>(
   "AcademicSemester",
   academicSemesterSchema

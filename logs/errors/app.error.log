@@ -73,3 +73,6 @@
 {"level":50,"time":"22 June, 2023 at 7:27 AM","pid":59818,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Invalid enum value. Expected 'Autumn' | 'Summer' | 'Fall', received 'siam'"}
 {"level":50,"time":"22 June, 2023 at 7:28 AM","pid":59818,"hostname":"codespaces-b74340","msg":"Error 💥Error: Requrested Document Not Found"}
 {"level":50,"time":"22 June, 2023 at 7:30 AM","pid":62826,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}
+{"level":50,"time":"22 June, 2023 at 10:54 AM","pid":17421,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Title must be a string"}
+{"level":50,"time":"22 June, 2023 at 10:55 AM","pid":17421,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Unrecognized key(s) in object: 'some'"}
+{"level":50,"time":"22 June, 2023 at 11:00 AM","pid":19830,"hostname":"codespaces-b74340","msg":"Error 💥Error: Duplicate field value: Humanity. Please use another value!"}
