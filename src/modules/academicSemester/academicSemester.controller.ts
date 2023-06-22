@@ -68,12 +68,29 @@ const updateAcademicSemester: RequestHandler = catchAsyncErrors(
     const result: Partial<IAcademicSemester> | null = await academicSemesterService.updateAcademicSemester(id, updatePayload);
 
     if (!result) {
-      throw new AppError("Requrested Document not Updated", httpStatus.NOT_FOUND)
+      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND)
     }
     sendResponse<Partial<IAcademicSemester>>(res, {
       statusCode: httpStatus.OK,
       success: true,
+      message: "Document Updated Successfully",
       data: result
+    })
+  }
+);
+const deleteAcademicSemester: RequestHandler = catchAsyncErrors(
+  async (req: Request, res: Response) => {
+    const id: string = req.params.id
+
+    const result = await academicSemesterService.deleteAcademicSemester(id);
+
+    if (!result) {
+      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND)
+    }
+    sendResponse<Partial<IAcademicSemester>>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: "Document Deleted Successfully"
     })
   }
 );
@@ -84,6 +101,7 @@ const academicSemesterController = {
   createAcademicSemester,
   getAcademicSemesters,
   getSigleAcademicSemester,
-  updateAcademicSemester
+  updateAcademicSemester,
+  deleteAcademicSemester
 };
 export default academicSemesterController;

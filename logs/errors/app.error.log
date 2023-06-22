@@ -68,3 +68,8 @@
 {"level":50,"time":"22 June, 2023 at 6:58 AM","pid":47268,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. title and code are not matching"}
 {"level":50,"time":"22 June, 2023 at 7:09 AM","pid":52352,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Unrecognized key(s) in object: 'full'"}
 {"level":50,"time":"22 June, 2023 at 7:14 AM","pid":54531,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid _id: 6491d8481948cd3561274cf."}
+{"level":50,"time":"22 June, 2023 at 7:16 AM","pid":56238,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}
+{"level":50,"time":"22 June, 2023 at 7:17 AM","pid":56366,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}
+{"level":50,"time":"22 June, 2023 at 7:27 AM","pid":59818,"hostname":"codespaces-b74340","msg":"Error 💥Error: Invalid input data. Invalid enum value. Expected 'Autumn' | 'Summer' | 'Fall', received 'siam'"}
+{"level":50,"time":"22 June, 2023 at 7:28 AM","pid":59818,"hostname":"codespaces-b74340","msg":"Error 💥Error: Requrested Document Not Found"}
+{"level":50,"time":"22 June, 2023 at 7:30 AM","pid":62826,"hostname":"codespaces-b74340","msg":"Uncaught Exception...😓. Process Terminated"}

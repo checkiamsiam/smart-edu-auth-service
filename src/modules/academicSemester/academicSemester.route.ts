@@ -30,5 +30,10 @@ academicSemesterRoutes.put(
   academicSemesterController.updateAcademicSemester
 );
 
+academicSemesterRoutes.delete(
+  "/delete/:id",
+  academicSemesterController.deleteAcademicSemester
+);
+
 
 export default academicSemesterRoutes;

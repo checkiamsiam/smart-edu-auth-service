@@ -36,7 +36,7 @@ const getSingleAcademicSemester = async (
   queryFeatures: IQueryFeatures
 ): Promise<Partial<IAcademicSemester> | null> => {
 
-  const result = await AcademicSemester.findById(id).select(queryFeatures.fields)
+  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findById(id).select(queryFeatures.fields).lean()
 
   return result;
 };
@@ -46,7 +46,18 @@ const updateAcademicSemester = async (
   payload: Partial<IAcademicSemester>
 ): Promise<Partial<IAcademicSemester> | null> => {
 
-  const result = await AcademicSemester.findByIdAndUpdate(id, payload, { new: true })
+  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findByIdAndUpdate(id, payload, { new: true }).lean()
+
+  return result;
+};
+
+const deleteAcademicSemester = async (
+  id: string
+) => {
+
+  const result: Partial<IAcademicSemester> | null = await AcademicSemester.findByIdAndDelete(id).lean()
+
+  console.log(result)
 
   return result;
 };
@@ -58,7 +69,8 @@ const academicSemesterService = {
   create,
   getAcademicSemesters,
   getSingleAcademicSemester,
-  updateAcademicSemester
+  updateAcademicSemester,
+  deleteAcademicSemester
 };
 
 export default academicSemesterService;
