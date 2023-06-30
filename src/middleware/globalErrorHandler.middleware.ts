@@ -50,7 +50,9 @@ const sendErrorProd: THandleErrorResponse = (err, res) => {
       statusCode: httpStatus.INTERNAL_SERVER_ERROR,
       success: false,
       message: "Something went wrong",
-      errorMessage: err.message,
+      error: {
+        message: err.message,
+      },
     });
   }
 };
@@ -60,8 +62,10 @@ const sendErrorDev: THandleErrorResponse = (err, res) => {
   sendResponse(res, {
     statusCode: err.statusCode,
     success: false,
-    errorMessage: err.message,
-    stack: err.stack,
+    error: {
+      message: err.message,
+      stack: err.stack,
+    },
   });
 };
 

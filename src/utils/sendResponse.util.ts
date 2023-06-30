@@ -4,8 +4,10 @@ interface IApiResponseData<T> {
   statusCode: number;
   success: boolean;
   message?: string | null;
-  errorMessage?: string | null;
-  stack?: string;
+  error?: {
+    message: string;
+    stack?: string;
+  };
   meta?: {
     page: number;
     limit: number;
@@ -22,8 +24,7 @@ const sendResponse = <T>(res: Response, data: IApiResponseData<T>): void => {
     message: data.message || undefined,
     meta: data.meta || undefined,
     data: data.data || undefined,
-    errorMessage: data.errorMessage || undefined,
-    stack: data.stack || undefined,
+    error: data.error || undefined,
   };
 
   res.status(data.statusCode).json(responseData);
