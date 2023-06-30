@@ -1,6 +1,13 @@
 import { Model } from "mongoose";
 
-export type userRole = "student" | "faculty" | "admin";
+export type userRole = "student" | "faculty" | "admin" | "superAdmin";
+
+export enum userRoleEnum {
+  superAdmin = "superAdmin",
+  student = "student",
+  faculty = "faculty",
+  admin = "admin",
+}
 
 export type IUser = {
   id: string;
