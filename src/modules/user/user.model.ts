@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import { IUser, UserModel } from "./user.interface";
 
-const userSchema = new Schema<IUser>(
+export const userSchema = new Schema(
   {
     id: {
       type: String,

@@ -1,3 +1,5 @@
+import { AcademicSemester } from "../academicSemester/academicSemester.model";
+import { IStudent } from "../student/student.interface";
 import { IUser, userRoleEnum } from "./user.interface";
 import { User } from "./user.model";
 
@@ -38,9 +40,13 @@ const getLastSuperAdminId = async (): Promise<string | undefined> => {
   return lastId?.id;
 };
 
-const createUser = async (user: IUser): Promise<IUser> => {
-  // const lastId = await getLastId();
-  // const newId = userUtils.generateNewID(null);
+const createStudent = async (
+  student: IStudent,
+  user: IUser
+): Promise<IUser | null> => {
+  const academicSemester = await AcademicSemester.findById(
+    student.academicSemester
+  ).lean();
   user.id = "000001";
   const newUser = await User.create(user);
   return newUser;
@@ -51,7 +57,7 @@ const userService = {
   getLastFacultyId,
   getLastAdminId,
   getLastSuperAdminId,
-  createUser,
+  createStudent,
 };
 
 export default userService;

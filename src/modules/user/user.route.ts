@@ -6,9 +6,9 @@ import userValidations from "./user.validations";
 const userRoutes: Router = express.Router();
 
 userRoutes.post(
-  "/create-user",
-  validateRequest(userValidations.createUserReq),
-  userController.createUser
+  "/create-student",
+  validateRequest(userValidations.createStudentReq),
+  userController.createStudent
 );
 
 export default userRoutes;

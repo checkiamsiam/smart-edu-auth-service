@@ -1,23 +1,28 @@
 import { Request, RequestHandler, Response } from "express";
 import httpStatus from "http-status";
+import config from "../../config";
 import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import sendResponse from "../../utils/sendResponse.util";
-import { IUser } from "./user.interface";
+import { IUser, userRoleEnum } from "./user.interface";
 import userService from "./user.service";
 
-const createUser: RequestHandler = catchAsyncErrors(
+const createStudent: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
-    const userData = req.body;
-    const result = await userService.createUser(userData);
+    const { student, ...userData } = req.body;
+    if (!userData.password) {
+      userData.password = config.studentDefaultPassword;
+    }
+    userData.role = userRoleEnum.student;
+    const result = await userService.createStudent(student, userData);
     sendResponse<IUser>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: "User created successfully",
+      message: "Student created successfully",
       data: result,
     });
   }
 );
 
-const userController = { createUser };
+const userController = { createStudent };
 
 export default userController;
