@@ -1,6 +1,6 @@
 import { Model } from "mongoose";
 
-export type userRole = "student" | "faculty" | "admin" | "superAdmin";
+export type TUserRole = "student" | "faculty" | "admin" | "superAdmin";
 
 export enum userRoleEnum {
   superAdmin = "superAdmin",
@@ -11,7 +11,7 @@ export enum userRoleEnum {
 
 export type IUser = {
   id: string;
-  role: userRole;
+  role: TUserRole;
   password: string;
 };
 

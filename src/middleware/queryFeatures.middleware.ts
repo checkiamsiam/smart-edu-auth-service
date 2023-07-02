@@ -19,6 +19,9 @@ const queryFeatures = (
       });
     }
 
+    // lookup control
+    //not yet set
+
     if (documentNumber === "single") {
       const queryFeaturesObj: Partial<IQueryFeatures> = {
         fields: fieldsObj,
