@@ -1,7 +1,12 @@
+import httpStatus from "http-status";
+import mongoose, { Types } from "mongoose";
+import AppError from "../../utils/customError.util";
 import { AcademicSemester } from "../academicSemester/academicSemester.model";
 import { IStudent } from "../student/student.interface";
+import { Student } from "../student/student.model";
 import { IUser, userRoleEnum } from "./user.interface";
 import { User } from "./user.model";
+import userUtils from "./user.util";
 
 const getLastStudentId = async (): Promise<string | undefined> => {
   const lastId = await User.findOne(
@@ -47,9 +52,67 @@ const createStudent = async (
   const academicSemester = await AcademicSemester.findById(
     student.academicSemester
   ).lean();
-  user.id = "000001";
-  const newUser = await User.create(user);
-  return newUser;
+
+  if (!academicSemester) {
+    throw new AppError("Academic semester not found", httpStatus.NOT_FOUND);
+  }
+
+  let newUserId: Types.ObjectId | null = null;
+
+  const session = await mongoose.startSession();
+
+  try {
+    session.startTransaction();
+
+    const newStudentId = await userUtils.generateNewStudentID(academicSemester);
+
+    user.id = newStudentId;
+    student.id = newStudentId;
+
+    const newStudent = await Student.create([student], { session });
+
+    if (!newStudent.length) {
+      throw new AppError(
+        "Student not created",
+        httpStatus.INTERNAL_SERVER_ERROR
+      );
+    }
+
+    user.student = newStudent[0]._id;
+
+    const newUser = await User.create([user], { session });
+
+    if (!newUser.length) {
+      throw new AppError("User not created", httpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    newUserId = newUser[0]._id;
+
+    await session.commitTransaction();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  } finally {
+    await session.endSession();
+  }
+
+  const result = await User.findById(newUserId).populate({
+    path: "student",
+    populate: [
+      {
+        path: "academicSemester",
+      },
+      {
+        path: "academicDepartment",
+      },
+      {
+        path: "academicFaculty",
+      },
+    ],
+  });
+
+  return result;
 };
 
 const userService = {

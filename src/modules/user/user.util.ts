@@ -9,7 +9,7 @@ const generateNewStudentID = async (
     ? lastIdWithSignatures.slice(4)
     : (0).toString().padStart(6, "0");
   const incrementedId = (parseInt(lastId) + 1).toString().padStart(6, "0");
-  return `${academicSemester.year.toString(2)}${
+  return `${academicSemester.year.toString().slice(2)}${
     academicSemester.code
   }${incrementedId}`;
 };
