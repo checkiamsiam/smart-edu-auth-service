@@ -11,3 +11,15 @@ export type TMonthsName =
   | "October"
   | "November"
   | "December";
+
+export type bloodGroup =
+  | "A+"
+  | "A-"
+  | "B+"
+  | "B-"
+  | "AB+"
+  | "AB-"
+  | "O+"
+  | "O-";
+
+export type gender = "male" | "female";

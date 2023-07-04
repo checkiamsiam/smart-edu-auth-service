@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { bloodGroup, gender } from "../student/student.constant";
+import { bloodGroup } from "../../constants/bloodGroup.constant";
+import { gender } from "../../constants/gender.constant copy";
 
 const createStudentReq = z.object({
   body: z.object({

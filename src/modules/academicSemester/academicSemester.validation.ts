@@ -1,9 +1,9 @@
 import { z } from "zod";
+import { months } from "../../constants/months.constant";
 import {
   academicSemesterCodes,
   academicSemesterTitleCodeMapper,
   academicSemesterTitles,
-  acdemicSemesterMonths,
 } from "./academicSemester.constant";
 
 const createAcademicSemesterReq = z.object({
@@ -18,11 +18,11 @@ const createAcademicSemesterReq = z.object({
         invalid_type_error: "Year must be a number",
       }),
       code: z.enum([...academicSemesterCodes] as [string, ...string[]]),
-      startMonth: z.enum([...acdemicSemesterMonths] as [string, ...string[]], {
+      startMonth: z.enum([...months] as [string, ...string[]], {
         required_error: "Start month is required",
         invalid_type_error: "Start month must be a string",
       }),
-      endMonth: z.enum([...acdemicSemesterMonths] as [string, ...string[]], {
+      endMonth: z.enum([...months] as [string, ...string[]], {
         required_error: "End month is required",
         invalid_type_error: "End month must be a string",
       }),
@@ -49,13 +49,13 @@ const updateSemesterReq = z
           .enum([...academicSemesterCodes] as [string, ...string[]])
           .optional(),
         startMonth: z
-          .enum([...acdemicSemesterMonths] as [string, ...string[]], {
+          .enum([...months] as [string, ...string[]], {
             required_error: "Start month is required",
             invalid_type_error: "Start month must be a string",
           })
           .optional(),
         endMonth: z
-          .enum([...acdemicSemesterMonths] as [string, ...string[]], {
+          .enum([...months] as [string, ...string[]], {
             required_error: "End month is required",
             invalid_type_error: "End month must be a string",
           })
