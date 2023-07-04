@@ -2,6 +2,8 @@ import httpStatus from "http-status";
 import mongoose, { Types } from "mongoose";
 import AppError from "../../utils/customError.util";
 import { AcademicSemester } from "../academicSemester/academicSemester.model";
+import { IFaculty } from "../faculty/faculty.interface";
+import { Faculty } from "../faculty/faculty.model";
 import { IStudent } from "../student/student.interface";
 import { Student } from "../student/student.model";
 import { IUser, userRoleEnum } from "./user.interface";
@@ -115,12 +117,72 @@ const createStudent = async (
   return result;
 };
 
+const createFaculty = async (
+  faculty: IFaculty,
+  user: IUser
+): Promise<IUser | null> => {
+  let newUserId: Types.ObjectId | null = null;
+
+  const session = await mongoose.startSession();
+
+  try {
+    session.startTransaction();
+
+    const newFacultyID = await userUtils.generateNewFacultyID();
+
+    user.id = newFacultyID;
+    faculty.id = newFacultyID;
+
+    const newFaculty = await Faculty.create([faculty], { session });
+
+    if (!newFaculty.length) {
+      throw new AppError(
+        "Faculty not created",
+        httpStatus.INTERNAL_SERVER_ERROR
+      );
+    }
+
+    user.faculty = newFaculty[0]._id;
+
+    const newUser = await User.create([user], { session });
+
+    if (!newUser.length) {
+      throw new AppError("User not created", httpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    newUserId = newUser[0]._id;
+
+    await session.commitTransaction();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  } finally {
+    await session.endSession();
+  }
+
+  const result = await User.findById(newUserId).populate({
+    path: "faculty",
+    populate: [
+      {
+        path: "academicDepartment",
+      },
+      {
+        path: "academicFaculty",
+      },
+    ],
+  });
+
+  return result;
+};
+
 const userService = {
   getLastStudentId,
   getLastFacultyId,
   getLastAdminId,
   getLastSuperAdminId,
   createStudent,
+  createFaculty,
 };
 
 export default userService;

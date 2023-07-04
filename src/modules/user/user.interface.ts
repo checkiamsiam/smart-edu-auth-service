@@ -1,4 +1,6 @@
 import { Model, Types } from "mongoose";
+import { IAdmin } from "../admin/admin.interface";
+import { IFaculty } from "../admin/admin.model";
 import { IStudent } from "../student/student.interface";
 
 export type TUserRole = "student" | "faculty" | "admin" | "superAdmin";
@@ -15,8 +17,8 @@ export type IUser = {
   role: TUserRole;
   password: string;
   student?: Types.ObjectId | IStudent;
-  faculty?: Types.ObjectId; // | IAcademicFaculty;
-  admin?: Types.ObjectId; // | IAcademicDepartment;
+  faculty?: Types.ObjectId | IFaculty;
+  admin?: Types.ObjectId | IAdmin;
 };
 
 export type UserModel = Model<IUser, object>;

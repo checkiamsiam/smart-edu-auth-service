@@ -11,4 +11,10 @@ userRoutes.post(
   userController.createStudent
 );
 
+userRoutes.post(
+  "/create-faculty",
+  validateRequest(userValidations.createFacultyReq),
+  userController.createFaculty
+);
+
 export default userRoutes;
