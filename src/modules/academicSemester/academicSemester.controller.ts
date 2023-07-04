@@ -81,7 +81,7 @@ const updateAcademicSemester: RequestHandler = catchAsyncErrors(
       await academicSemesterService.updateAcademicSemester(id, updatePayload);
 
     if (!result) {
-      throw new AppError("Requrested Document Not Found", httpStatus.NOT_FOUND);
+      throw new AppError("Requested Document Not Found", httpStatus.NOT_FOUND);
     }
     sendResponse<Partial<IAcademicSemester>>(res, {
       statusCode: httpStatus.OK,

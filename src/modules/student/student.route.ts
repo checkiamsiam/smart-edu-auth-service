@@ -1,6 +1,8 @@
 import express, { Router } from "express";
 import queryFeatures from "../../middleware/queryFeatures.middleware";
+import validateRequest from "../../middleware/validateRequest.middleware";
 import studentControllers from "./student.controller";
+import { studentValidation } from "./student.validation";
 
 const studentRoute: Router = express.Router();
 
@@ -14,6 +16,10 @@ studentRoute.get(
   queryFeatures("single"),
   studentControllers.getSingleStudent
 );
-// studentRoute.put("/:id", studentControllers.updateStudent);
+studentRoute.put(
+  "/update/:id",
+  validateRequest(studentValidation.updateStudentReq),
+  studentControllers.updateStudent
+);
 
 export default studentRoute;

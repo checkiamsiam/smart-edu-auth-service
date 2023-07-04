@@ -40,7 +40,20 @@ const getSingleStudent: RequestHandler = catchAsyncErrors(
 
 const updateStudent: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
-    res.send("update student");
+    const id: string = req.params.id;
+    const updatePayload: Partial<IStudent> = req.body;
+    const result: Partial<IStudent> | null =
+      await studentServices.updateStudent(id, updatePayload);
+
+    if (!result) {
+      throw new AppError("Requested Document Not Found", httpStatus.NOT_FOUND);
+    }
+    sendResponse<Partial<IStudent>>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: "Document Updated Successfully",
+      data: result,
+    });
   }
 );
 

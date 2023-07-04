@@ -17,7 +17,7 @@ const getStudents = async (
         "id",
         "email",
         "contactNo",
-        "name.fisrtName",
+        "name.firstName",
         "name.middleName",
         "name.lastName",
       ],
@@ -53,9 +53,35 @@ const updateStudent = async (
   id: string,
   payload: Partial<IStudent>
 ): Promise<Partial<IStudent> | null> => {
+  const { name, guardian, localGuardian, ...otherPayloads } = payload;
+
+  const updatingPayload: Partial<IStudent> & { [key: string]: any } = {
+    ...otherPayloads,
+  };
+
+  if (name && Object.keys(name).length > 0) {
+    Object.keys(name).forEach((key) => {
+      updatingPayload[`name.${key}`] = name[key as keyof typeof name];
+    });
+  }
+
+  if (guardian && Object.keys(guardian).length > 0) {
+    Object.keys(guardian).forEach((key) => {
+      updatingPayload[`guardian.${key}`] =
+        guardian[key as keyof typeof guardian];
+    });
+  }
+
+  if (localGuardian && Object.keys(localGuardian).length > 0) {
+    Object.keys(localGuardian).forEach((key) => {
+      updatingPayload[`localGuardian.${key}`] =
+        localGuardian[key as keyof typeof localGuardian];
+    });
+  }
+
   const result: Partial<IStudent> | null = await Student.findByIdAndUpdate(
     id,
-    payload,
+    updatingPayload,
     { new: true }
   ).lean();
 
