@@ -37,9 +37,7 @@ const getSingleManagementDepartment = async (
   queryFeatures: IQueryFeatures
 ): Promise<Partial<IManagementDepartment> | null> => {
   const result: Partial<IManagementDepartment> | null =
-    await ManagementDepartment.findById(id)
-      .select(queryFeatures.fields)
-      .populate("managementFaculty");
+    await ManagementDepartment.findById(id).select(queryFeatures.fields);
 
   return result;
 };

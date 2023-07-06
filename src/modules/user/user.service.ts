@@ -10,6 +10,7 @@ import { Student } from "../student/student.model";
 import { IUser, userRoleEnum } from "./user.interface";
 import { User } from "./user.model";
 import userUtils from "./user.util";
+import { Admin } from "../admin/admin.model";
 
 const getLastStudentId = async (): Promise<string | undefined> => {
   const lastId = await User.findOne(
@@ -192,7 +193,7 @@ const createAdmin = async (
     user.id = newAdminID;
     admin.id = newAdminID;
 
-    const newAdmin = await Faculty.create([admin], { session });
+    const newAdmin = await Admin.create([admin], { session });
 
     if (!newAdmin.length) {
       throw new AppError("Admin not created", httpStatus.INTERNAL_SERVER_ERROR);

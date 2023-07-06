@@ -1,7 +1,7 @@
 import { Model, Types } from "mongoose";
 import { IAdmin } from "../admin/admin.interface";
-import { IFaculty } from "../admin/admin.model";
 import { IStudent } from "../student/student.interface";
+import { IFaculty } from "../faculty/faculty.interface";
 
 export type TUserRole = "student" | "faculty" | "admin" | "superAdmin";
 

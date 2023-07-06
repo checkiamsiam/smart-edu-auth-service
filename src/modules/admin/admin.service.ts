@@ -39,7 +39,7 @@ const getSingleAdmin = async (
 ): Promise<Partial<IAdmin> | null> => {
   const result: Partial<IAdmin> | null = await Admin.findById(id)
     .select(queryFeatures.fields)
-    .populate([{ path: "academicDepartment" }, { path: "academicAdmin" }])
+    .populate([{ path: "managementDepartment" }])
     .lean();
 
   return result;
