@@ -1,4 +1,3 @@
-import { Faculty } from "./../faculty/faculty.model";
 import { Request, RequestHandler, Response } from "express";
 import httpStatus from "http-status";
 import config from "../../config";
@@ -27,7 +26,7 @@ const createFaculty: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
     const { faculty, ...userData } = req.body;
     if (!userData.password) {
-      userData.password = config.studentDefaultPassword;
+      userData.password = config.facultyDefaultPassword;
     }
     userData.role = userRoleEnum.faculty;
     const result = await userService.createFaculty(faculty, userData);
@@ -39,7 +38,23 @@ const createFaculty: RequestHandler = catchAsyncErrors(
     });
   }
 );
+const createAdmin: RequestHandler = catchAsyncErrors(
+  async (req: Request, res: Response) => {
+    const { admin, ...userData } = req.body;
+    if (!userData.password) {
+      userData.password = config.adminDefaultPassword;
+    }
+    userData.role = userRoleEnum.admin;
+    const result = await userService.createAdmin(admin, userData);
+    sendResponse<IUser>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: "Admin created successfully",
+      data: result,
+    });
+  }
+);
 
-const userController = { createStudent, createFaculty };
+const userController = { createStudent, createFaculty, createAdmin };
 
 export default userController;

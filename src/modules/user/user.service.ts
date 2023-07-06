@@ -2,6 +2,7 @@ import httpStatus from "http-status";
 import mongoose, { Types } from "mongoose";
 import AppError from "../../utils/customError.util";
 import { AcademicSemester } from "../academicSemester/academicSemester.model";
+import { IAdmin } from "../admin/admin.interface";
 import { IFaculty } from "../faculty/faculty.interface";
 import { Faculty } from "../faculty/faculty.model";
 import { IStudent } from "../student/student.interface";
@@ -175,6 +176,58 @@ const createFaculty = async (
 
   return result;
 };
+const createAdmin = async (
+  admin: IAdmin,
+  user: IUser
+): Promise<IUser | null> => {
+  let newUserId: Types.ObjectId | null = null;
+
+  const session = await mongoose.startSession();
+
+  try {
+    session.startTransaction();
+
+    const newAdminID = await userUtils.generateNewAdminID();
+
+    user.id = newAdminID;
+    admin.id = newAdminID;
+
+    const newAdmin = await Faculty.create([admin], { session });
+
+    if (!newAdmin.length) {
+      throw new AppError("Admin not created", httpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    user.faculty = newAdmin[0]._id;
+
+    const newUser = await User.create([user], { session });
+
+    if (!newUser.length) {
+      throw new AppError("User not created", httpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    newUserId = newUser[0]._id;
+
+    await session.commitTransaction();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  } finally {
+    await session.endSession();
+  }
+
+  const result = await User.findById(newUserId).populate({
+    path: "admin",
+    populate: [
+      {
+        path: "ManagementDepartment",
+      },
+    ],
+  });
+
+  return result;
+};
 
 const userService = {
   getLastStudentId,
@@ -183,6 +236,7 @@ const userService = {
   getLastSuperAdminId,
   createStudent,
   createFaculty,
+  createAdmin,
 };
 
 export default userService;

@@ -17,4 +17,10 @@ userRoutes.post(
   userController.createFaculty
 );
 
+userRoutes.post(
+  "/create-admin",
+  validateRequest(userValidations.createAdminReq),
+  userController.createAdmin
+);
+
 export default userRoutes;
