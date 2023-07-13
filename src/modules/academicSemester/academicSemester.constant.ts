@@ -16,21 +16,6 @@ export const academicSemesterCodes: TAcademicSemesterCodes[] = [
   "03",
 ];
 
-export const acdemicSemesterMonths: TMonthsName[] = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
 export const academicSemesterTitleCodeMapper: {
   [key: string]: string;
 } = {
@@ -38,5 +23,3 @@ export const academicSemesterTitleCodeMapper: {
   Summer: "02",
   Fall: "03",
 };
-
-

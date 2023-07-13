@@ -8,6 +8,15 @@ const config: IConfig = {
   port: process.env.PORT || 5000,
   dbUriDev: process.env.DB_URL_DEV,
   dbUriProd: process.env.DB_URL_PROD,
+  studentDefaultPassword: process.env.STUDENT_DEFAULT_PASSWORD || "12345678",
+  facultyDefaultPassword: process.env.FACULTY_DEFAULT_PASSWORD || "F1234567",
+  adminDefaultPassword: process.env.STUDENT_DEFAULT_PASSWORD || "A2345678",
+  jwt: {
+    secret: process.env.JWT_SECRET || "secret",
+    refreshSecret: process.env.JWT_REFRESH_SECRET || "refreshSecret",
+    expiresIn: process.env.JWT_EXPIRES_IN || "6h",
+    refreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || "7d",
+  },
 };
 
 export default config;

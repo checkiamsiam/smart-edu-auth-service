@@ -1,10 +1,10 @@
 import httpStatus from "http-status";
 import { Schema, model } from "mongoose";
+import { months } from "../../constants/months.constant";
 import AppError from "../../utils/customError.util";
 import {
   academicSemesterCodes,
   academicSemesterTitles,
-  acdemicSemesterMonths,
 } from "./academicSemester.constant";
 import { IAcademicSemester } from "./academicSemester.interface";
 
@@ -34,7 +34,7 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
       type: String,
       required: true,
       enum: {
-        values: acdemicSemesterMonths,
+        values: months,
         message: "{VALUE} is not supported.",
       },
     },
@@ -42,7 +42,7 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
       type: String,
       required: true,
       enum: {
-        values: acdemicSemesterMonths,
+        values: months,
         message: "{VALUE} is not supported.",
       },
     },
@@ -66,7 +66,7 @@ academicSemesterSchema.pre("save", async function (next) {
   next();
 });
 
-// modal should defile at last
+// modal should define at last
 export const AcademicSemester = model<IAcademicSemester>(
   "AcademicSemester",
   academicSemesterSchema
