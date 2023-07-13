@@ -6,6 +6,12 @@ interface IConfig {
   studentDefaultPassword: string;
   facultyDefaultPassword: string;
   adminDefaultPassword: string;
+  jwt: {
+    secret: string;
+    refreshSecret: string;
+    expiresIn: string;
+    refreshExpiresIn: string;
+  };
 }
 
 export default IConfig;

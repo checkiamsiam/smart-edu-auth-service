@@ -10,7 +10,10 @@ const createStudent: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
     const { student, ...userData } = req.body;
     if (!userData.password) {
-      userData.password = config.studentDefaultPassword;
+      userData.password = config.adminDefaultPassword;
+      userData.needsPasswordChange = true;
+    } else {
+      userData.needsPasswordChange = false;
     }
     userData.role = userRoleEnum.student;
     const result = await userService.createStudent(student, userData);
@@ -26,7 +29,10 @@ const createFaculty: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
     const { faculty, ...userData } = req.body;
     if (!userData.password) {
-      userData.password = config.facultyDefaultPassword;
+      userData.password = config.adminDefaultPassword;
+      userData.needsPasswordChange = true;
+    } else {
+      userData.needsPasswordChange = false;
     }
     userData.role = userRoleEnum.faculty;
     const result = await userService.createFaculty(faculty, userData);
@@ -43,6 +49,9 @@ const createAdmin: RequestHandler = catchAsyncErrors(
     const { admin, ...userData } = req.body;
     if (!userData.password) {
       userData.password = config.adminDefaultPassword;
+      userData.needsPasswordChange = true;
+    } else {
+      userData.needsPasswordChange = false;
     }
     userData.role = userRoleEnum.admin;
     const result = await userService.createAdmin(admin, userData);

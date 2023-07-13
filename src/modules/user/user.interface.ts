@@ -19,6 +19,11 @@ export type IUser = {
   student?: Types.ObjectId | IStudent;
   faculty?: Types.ObjectId | IFaculty;
   admin?: Types.ObjectId | IAdmin;
+  needsPasswordChange: boolean;
+  passwordChangedAt?: Date;
+  comparePassword: (candidatePassword: string) => Promise<boolean>;
 };
 
-export type UserModel = Model<IUser, object>;
+export interface UserModel extends Model<IUser> {
+  isUserExist(id: string): Promise<IUser | null>;
+}
