@@ -1,10 +1,9 @@
 import { Request, RequestHandler, Response } from "express";
-import httpStatus from "http-status";
+import config from "../../config";
 import catchAsyncErrors from "../../utils/catchAsyncError.util";
 import sendResponse from "../../utils/sendResponse.util";
+import { ILoginUserResponse, IRefreshTokenResponse } from "./auth.interface";
 import { authService } from "./auth.service";
-import config from "../../config";
-import { ILoginUserResponse } from "./auth.interface";
 
 const login: RequestHandler = catchAsyncErrors(
   async (req: Request, res: Response) => {
@@ -28,7 +27,29 @@ const login: RequestHandler = catchAsyncErrors(
     });
   }
 );
+const refreshToken: RequestHandler = catchAsyncErrors(
+  async (req: Request, res: Response) => {
+    const { refreshToken } = req.cookies;
 
-const authController = { login };
+    const result = await authService.refreshToken(refreshToken);
+
+    // set refresh token into cookie
+    const cookieOptions = {
+      secure: !config.isDevelopment,
+      httpOnly: true,
+    };
+
+    res.cookie("refreshToken", refreshToken, cookieOptions);
+
+    sendResponse<IRefreshTokenResponse>(res, {
+      statusCode: 200,
+      success: true,
+      message: "User refreshed in successfully !",
+      data: result,
+    });
+  }
+);
+
+const authController = { login, refreshToken };
 
 export default authController;

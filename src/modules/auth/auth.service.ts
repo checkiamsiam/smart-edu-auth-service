@@ -3,7 +3,11 @@ import config from "../../config";
 import { jwtHelpers } from "../../helpers/jwt.helper";
 import AppError from "../../utils/customError.util";
 import { User } from "../user/user.model";
-import { ILoginUser, ILoginUserResponse } from "./auth.interface";
+import {
+  ILoginUser,
+  ILoginUserResponse,
+  IRefreshTokenResponse,
+} from "./auth.interface";
 
 const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   const { id, password } = payload;
@@ -22,13 +26,13 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   const { id: userId, role, needsPasswordChange } = isUserExist;
 
   const accessToken = jwtHelpers.createToken(
-    { userId, role },
+    { id: userId, role },
     config.jwt.secret,
     config.jwt.expiresIn
   );
 
   const refreshToken = jwtHelpers.createToken(
-    { userId, role },
+    { id: userId, role },
     config.jwt.refreshSecret,
     config.jwt.refreshExpiresIn
   );
@@ -40,6 +44,32 @@ const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   };
 };
 
+const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
+  const decoded = jwtHelpers.verifyToken(token, config.jwt.refreshSecret);
+
+  const { userId } = decoded;
+
+  const isUserExist = await User.isUserExist(userId);
+
+  if (!isUserExist) {
+    throw new AppError("User does not exist", httpStatus.NOT_FOUND);
+  }
+
+  const newAccessToken = jwtHelpers.createToken(
+    {
+      id: isUserExist.id,
+      role: isUserExist.role,
+    },
+    config.jwt.secret,
+    config.jwt.expiresIn
+  );
+
+  return {
+    accessToken: newAccessToken,
+  };
+};
+
 export const authService = {
   loginUser,
+  refreshToken,
 };
