@@ -1,4 +1,5 @@
 import express, { Router } from "express";
+import authorization from "../../middleware/authorization.middleware";
 import queryFeatures from "../../middleware/queryFeatures.middleware";
 import validateRequest from "../../middleware/validateRequest.middleware";
 import managementDepartmentController from "./managementDepartment.controller";

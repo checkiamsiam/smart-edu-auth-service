@@ -21,6 +21,7 @@ adminRoute.get(
 );
 adminRoute.put(
   "/update/:id",
+  authorization(userRoleEnum.admin, userRoleEnum.superAdmin),
   validateRequest(adminValidation.updateAdminReq),
   adminControllers.updateAdmin
 );

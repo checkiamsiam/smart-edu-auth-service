@@ -27,7 +27,7 @@ const authorization =
 
       req.user = decoded;
 
-      if (roles.length && !roles.includes(decoded.role)) {
+      if (roles.length > 0 && !roles.includes(decoded.role)) {
         throw new AppError("Forbidden", httpStatus.FORBIDDEN);
       }
       next();
