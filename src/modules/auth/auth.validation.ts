@@ -19,9 +19,21 @@ const refreshTokenReq = z.object({
   }),
 });
 
+const changePasswordReq = z.object({
+  body: z.object({
+    oldPassword: z.string({
+      required_error: "Old password  is required",
+    }),
+    newPassword: z.string({
+      required_error: "New password  is required",
+    }),
+  }),
+});
+
 const authValidation = {
   loginReq,
   refreshTokenReq,
+  changePasswordReq,
 };
 
 export default authValidation;

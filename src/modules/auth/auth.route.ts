@@ -1,18 +1,26 @@
 import express from "express";
+import authorization from "../../middleware/authorization.middleware";
 import validateRequest from "../../middleware/validateRequest.middleware";
 import authController from "./auth.controller";
 import authValidation from "./auth.validation";
-const router = express.Router();
+const authRoutes = express.Router();
 
-router.post(
+authRoutes.post(
   "/login",
   validateRequest(authValidation.loginReq),
   authController.login
 );
-router.post(
+authRoutes.post(
   "/refresh-token",
   validateRequest(authValidation.refreshTokenReq),
   authController.refreshToken
 );
 
-export const authRoutes = router;
+authRoutes.patch(
+  "/change-password",
+  validateRequest(authValidation.changePasswordReq),
+  authorization(),
+  authController.changePassword
+);
+
+export default authRoutes;

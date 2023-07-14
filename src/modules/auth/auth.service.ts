@@ -69,7 +69,30 @@ const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
   };
 };
 
+const changePassword = async (
+  id: string,
+  oldPassword: string,
+  newPassword: string
+): Promise<void> => {
+  const isUserExist = await User.findOne({ id }).select("+password");
+
+  if (!isUserExist) {
+    throw new AppError("User does not exist", httpStatus.NOT_FOUND);
+  }
+  if (
+    isUserExist.password &&
+    !(await isUserExist.comparePassword(oldPassword))
+  ) {
+    throw new AppError("Old Password is incorrect", httpStatus.UNAUTHORIZED);
+  }
+
+  isUserExist.password = newPassword;
+  isUserExist.needsPasswordChange = false;
+  await isUserExist.save();
+};
+
 export const authService = {
   loginUser,
   refreshToken,
+  changePassword,
 };
