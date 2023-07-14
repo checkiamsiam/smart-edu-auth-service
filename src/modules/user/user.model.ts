@@ -73,6 +73,7 @@ userSchema.pre("save", async function (next) {
   if (!user.needsPasswordChange) {
     user.passwordChangedAt = new Date();
   }
+
   next();
 });
 
