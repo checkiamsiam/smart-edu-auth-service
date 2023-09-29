@@ -12,6 +12,10 @@ interface IConfig {
     expiresIn: string;
     refreshExpiresIn: string;
   };
+  redis: {
+    url: string;
+    expires_in: string;
+  };
 }
 
 export default IConfig;

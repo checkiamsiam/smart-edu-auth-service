@@ -17,6 +17,10 @@ const config: IConfig = {
     expiresIn: process.env.JWT_EXPIRES_IN || "6h",
     refreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || "7d",
   },
+  redis: {
+    url: process.env.REDIS_URL || "redis://localhost:6379",
+    expires_in: process.env.REDIS_EXPIRES_IN || "3600",
+  },
 };
 
 export default config;
