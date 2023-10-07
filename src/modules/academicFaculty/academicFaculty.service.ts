@@ -4,7 +4,11 @@ import {
   IQueryFeatures,
   IQueryResult,
 } from "../../interfaces/queryFeatures.interface";
-import { IAcademicFaculty } from "./academicFaculty.interface";
+import {
+  AcademicFacultyCreatedEvent,
+  AcademicFacultyUpdatedEvent,
+  IAcademicFaculty,
+} from "./academicFaculty.interface";
 import { AcademicFaculty } from "./academicFaculty.model";
 
 const create = async (payload: IAcademicFaculty): Promise<IAcademicFaculty> => {
@@ -55,12 +59,41 @@ const deleteAcademicFaculty = async (id: string) => {
   return result;
 };
 
+const insertIntoDBFromEvent = async (
+  e: AcademicFacultyCreatedEvent
+): Promise<void> => {
+  await AcademicFaculty.create({
+    syncId: e.id,
+    title: e.title,
+  });
+};
+
+const updateOneInDBFromEvent = async (
+  e: AcademicFacultyUpdatedEvent
+): Promise<void> => {
+  await AcademicFaculty.findOneAndUpdate(
+    { syncId: e.id },
+    {
+      $set: {
+        title: e.title,
+      },
+    }
+  );
+};
+
+const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
+  await AcademicFaculty.findOneAndDelete({ syncId });
+};
+
 const academicFacultyService = {
   create,
   getAcademicFaculties,
   getSingleAcademicFaculty,
   updateAcademicFaculty,
   deleteAcademicFaculty,
+  insertIntoDBFromEvent,
+  updateOneInDBFromEvent,
+  deleteOneFromDBFromEvent,
 };
 
 export default academicFacultyService;

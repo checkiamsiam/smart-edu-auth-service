@@ -46,6 +46,11 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
         message: "{VALUE} is not supported.",
       },
     },
+    syncId: {
+      type: String,
+      required: true,
+      unique: true,
+    },
   },
   {
     timestamps: true,
