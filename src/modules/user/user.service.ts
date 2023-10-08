@@ -1,16 +1,18 @@
 import httpStatus from "http-status";
 import mongoose, { Types } from "mongoose";
 import AppError from "../../utils/customError.util";
+import { redis } from "../../utils/redis.util";
 import { AcademicSemester } from "../academicSemester/academicSemester.model";
 import { IAdmin } from "../admin/admin.interface";
+import { Admin } from "../admin/admin.model";
 import { IFaculty } from "../faculty/faculty.interface";
 import { Faculty } from "../faculty/faculty.model";
 import { IStudent } from "../student/student.interface";
 import { Student } from "../student/student.model";
+import { EVENT_FACULTY_CREATED, EVENT_STUDENT_CREATED } from "./user.constant";
 import { IUser, userRoleEnum } from "./user.interface";
 import { User } from "./user.model";
 import userUtils from "./user.util";
-import { Admin } from "../admin/admin.model";
 
 const getLastStudentId = async (): Promise<string | undefined> => {
   const lastId = await User.findOne(
@@ -116,6 +118,10 @@ const createStudent = async (
     ],
   });
 
+  if (result) {
+    await redis.publish(EVENT_STUDENT_CREATED, JSON.stringify(result.student));
+  }
+
   return result;
 };
 
@@ -174,6 +180,10 @@ const createFaculty = async (
       },
     ],
   });
+
+  if (result) {
+    await redis.publish(EVENT_FACULTY_CREATED, JSON.stringify(result.faculty));
+  }
 
   return result;
 };
