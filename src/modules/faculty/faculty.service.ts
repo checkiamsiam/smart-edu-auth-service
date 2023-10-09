@@ -4,6 +4,8 @@ import {
   IQueryFeatures,
   IQueryResult,
 } from "../../interfaces/queryFeatures.interface";
+import { redis } from "../../utils/redis.util";
+import { EVENT_FACULTY_UPDATED } from "./faculty.constant";
 import { IFaculty } from "./faculty.interface";
 import { Faculty } from "./faculty.model";
 
@@ -66,6 +68,10 @@ const updateFaculty = async (
     updatingPayload,
     { new: true }
   ).lean();
+
+  if (result) {
+    await redis.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
 
   return result;
 };

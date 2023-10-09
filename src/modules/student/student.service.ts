@@ -4,6 +4,8 @@ import {
   IQueryFeatures,
   IQueryResult,
 } from "../../interfaces/queryFeatures.interface";
+import { redis } from "../../utils/redis.util";
+import { EVENT_STUDENT_UPDATED } from "./student.constant";
 import { IStudent } from "./student.interface";
 import { Student } from "./student.model";
 
@@ -84,6 +86,10 @@ const updateStudent = async (
     updatingPayload,
     { new: true }
   ).lean();
+
+  if (result) {
+    await redis.publish(EVENT_STUDENT_UPDATED, JSON.stringify(result));
+  }
 
   return result;
 };
