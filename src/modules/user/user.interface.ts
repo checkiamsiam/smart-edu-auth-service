@@ -3,10 +3,10 @@ import { IAdmin } from "../admin/admin.interface";
 import { IStudent } from "../student/student.interface";
 import { IFaculty } from "../faculty/faculty.interface";
 
-export type TUserRole = "student" | "faculty" | "admin" | "superAdmin";
+export type TUserRole = "student" | "faculty" | "admin" | "super_admin";
 
 export enum userRoleEnum {
-  superAdmin = "superAdmin",
+  superAdmin = "super_admin",
   student = "student",
   faculty = "faculty",
   admin = "admin",
